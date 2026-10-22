@@ -38,7 +38,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1
 Skrip memakai lockfile npm dan Composer agar versi paket konsisten. `requirements.txt`
 adalah daftar paket Python untuk layanan AI; file itu tidak dapat memasang Node.js,
 PHP, Composer, MySQL, atau program Tesseract. Runtime tersebut tetap perlu tersedia
-di komputer. Skrip membuat `.env` hanya jika kedua file konfigurasi belum ada dan
+di komputer. Skrip menyiapkan folder runtime `writable` CodeIgniter dan menguji
+izin tulisnya. Skrip membuat `.env` hanya jika kedua file konfigurasi belum ada dan
 tidak menimpa `.env` yang sudah dibuat.
 
 Untuk pemasangan manual, ikuti langkah berikut.

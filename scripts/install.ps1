@@ -101,6 +101,27 @@ Write-Host 'Memasang dependensi backend dari composer.lock...'
 $env:PATH = "$(Split-Path $phpPath);$env:PATH"
 Invoke-Native -FilePath $composer.Source -Arguments @('install', '--no-interaction', '--prefer-dist') -WorkingDirectory $backend
 
+Write-Host 'Menyiapkan direktori writable CodeIgniter...'
+$writable = Join-Path $backend 'writable'
+foreach ($directory in @('cache', 'logs', 'session', 'uploads', 'debugbar')) {
+    $path = Join-Path $writable $directory
+    New-Item -ItemType Directory -Path $path -Force | Out-Null
+    $placeholder = Join-Path $path 'index.html'
+    if (-not (Test-Path $placeholder)) {
+        Set-Content -LiteralPath $placeholder -Value '<!doctype html><title>403 Forbidden</title>' -Encoding ASCII
+    }
+}
+$writeProbe = Join-Path $writable 'cache/.install-write-check'
+try {
+    [IO.File]::WriteAllText($writeProbe, 'ok')
+}
+catch {
+    throw "CodeIgniter tidak dapat menulis ke $writable. Pindahkan proyek ke folder yang dapat ditulis atau periksa izin Windows."
+}
+finally {
+    Remove-Item -LiteralPath $writeProbe -Force -ErrorAction SilentlyContinue
+}
+
 $backendEnv = Join-Path $backend '.env'
 $aiEnv = Join-Path $ai '.env'
 if (-not (Test-Path $backendEnv) -and -not (Test-Path $aiEnv)) {
