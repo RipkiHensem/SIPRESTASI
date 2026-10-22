@@ -74,11 +74,15 @@ if (-not $phpPath -or -not (Test-Path $phpPath)) {
     throw 'PHP 8.2+ belum ditemukan. Instal PHP (misalnya melalui XAMPP) atau atur variabel PHP_BIN ke lokasi php.exe.'
 }
 
-$phpVersionIsSupported = & $phpPath -r 'exit(PHP_VERSION_ID >= 80200 ? 0 : 1);'
-if ($LASTEXITCODE -ne 0) { throw 'Backend membutuhkan PHP versi 8.2 atau lebih baru.' }
-$phpExtensions = & $phpPath -r 'echo implode(" ", get_loaded_extensions());'
+$phpVersionOutput = & $phpPath -v 2>&1
 if ($LASTEXITCODE -ne 0) { throw "PHP tidak bisa dijalankan dari $phpPath" }
-$loadedExtensions = @($phpExtensions -split '\s+' | ForEach-Object { $_.ToLowerInvariant() })
+$versionMatch = [regex]::Match(($phpVersionOutput -join "`n"), 'PHP\s+(\d+)\.(\d+)\.(\d+)')
+if (-not $versionMatch.Success -or ([int]$versionMatch.Groups[1].Value -lt 8) -or ([int]$versionMatch.Groups[1].Value -eq 8 -and [int]$versionMatch.Groups[2].Value -lt 2)) {
+    throw 'Backend membutuhkan PHP versi 8.2 atau lebih baru.'
+}
+$phpModules = & $phpPath -m 2>&1
+if ($LASTEXITCODE -ne 0) { throw "Tidak dapat membaca ekstensi PHP dari $phpPath" }
+$loadedExtensions = @($phpModules | Where-Object { $_ -notmatch '^\s*\[' } | ForEach-Object { $_.Trim().ToLowerInvariant() })
 $requiredExtensions = @('intl', 'mbstring', 'curl', 'mysqli', 'fileinfo')
 $missingExtensions = @($requiredExtensions | Where-Object { $_ -notin $loadedExtensions })
 if ($missingExtensions.Count -gt 0) {
