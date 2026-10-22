@@ -1,0 +1,119 @@
+/* =========================
+   REGISTER SUCCESS
+========================= */
+
+.register-success-container {
+  width: 100%;
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* SUCCESS ICON */
+
+.register-success-icon {
+  width: 78px;
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  color: #15976f;
+
+  border-radius: 50%;
+
+  background: #effbf6;
+
+  box-shadow:
+    0 0 0 10px rgba(21, 151, 111, 0.05),
+    0 0 0 20px rgba(21, 151, 111, 0.025);
+}
+
+/* BADGE */
+
+.register-success-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  padding: 5px 13px;
+
+  color: #15805f;
+
+  border-radius: 999px;
+
+  background: #dcf8ec;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* TITLE */
+
+.register-success-container h1 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* DESCRIPTION */
+
+.register-success-description {
+  margin: 12px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* BUTTON */
+
+.register-success-button {
+  width: 100%;
+  max-width: 430px;
+
+  margin-top: 32px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .register-success-container {
+    padding: 30px 0;
+  }
+
+  .register-success-icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .register-success-container h1 {
+    font-size: 28px;
+  }
+
+  .register-success-description {
+    font-size: 14px;
+  }
+
+  .register-success-button {
+    max-width: none;
+  }
+}

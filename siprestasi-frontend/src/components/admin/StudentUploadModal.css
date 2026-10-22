@@ -1,0 +1,836 @@
+:root {
+  --burgundy: #6D1735;
+  --burgundy-dark: #551027;
+
+  --rose-soft: #F9EEF2;
+  --border: #F0E7EA;
+
+  --text-primary: #1D1D1D;
+  --text-secondary: #756D70;
+
+  --success-bg: #EAF8F2;
+  --success-text: #287A5A;
+
+  --warning-bg: #FFF6E6;
+  --warning-text: #A56A00;
+
+  --danger-bg: #FCECEF;
+  --danger-text: #B23A55;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.student-upload-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1200;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(28, 18, 22, 0.38);
+
+  backdrop-filter: blur(2px);
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.student-upload-modal {
+  width: 100%;
+  max-width: 560px;
+
+  max-height: calc(100vh - 40px);
+
+  overflow-y: auto;
+
+  padding: 24px;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 22px 60px rgba(70, 19, 38, 0.18);
+
+  font-family: 'Titillium Web', sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.student-upload-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.student-upload-header h2 {
+  margin: 0 0 5px;
+
+  color: #221D1F;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.student-upload-header p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.student-upload-close {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #776C70;
+
+  font-family: inherit;
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.student-upload-close:hover {
+  background: #FAF5F7;
+
+  color: var(--burgundy);
+}
+
+
+/* =========================
+   DROPZONE
+========================= */
+
+.student-upload-dropzone {
+  min-height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 28px;
+
+  border: 1.5px dashed #DFC8D0;
+  border-radius: 11px;
+
+  background: #FFFDFD;
+
+  text-align: center;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.student-upload-dropzone.dragging {
+  border-color: var(--burgundy);
+
+  background: #FFF7F9;
+}
+
+.student-upload-dropzone-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 4px;
+
+  border-radius: 12px;
+
+  background: #F9EEF2;
+
+  color: var(--burgundy);
+}
+
+.student-upload-dropzone strong {
+  color: #30292C;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.student-upload-dropzone > span {
+  color: #9A9094;
+
+  font-size: 11px;
+}
+
+.student-upload-dropzone p {
+  margin: 5px 0 0;
+
+  color: #91878B;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   SELECT FILE BUTTON
+========================= */
+
+.student-upload-select-button {
+  margin-top: 2px;
+
+  padding: 8px 18px;
+
+  border: 1px solid var(--burgundy);
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: var(--burgundy);
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.student-upload-select-button:hover {
+  background: var(--burgundy);
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   SELECTED FILE
+========================= */
+
+.student-upload-selected-file {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  border: 1px solid #EDE3E7;
+  border-radius: 10px;
+
+  background: #FFFDFD;
+}
+
+.student-upload-file-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: #EAF7F0;
+
+  color: #21875D;
+}
+
+.student-upload-file-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  gap: 2px;
+}
+
+.student-upload-file-info strong {
+  overflow: hidden;
+
+  color: #292326;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.student-upload-file-info span {
+  color: #91878B;
+
+  font-size: 10px;
+}
+
+.student-upload-remove-file {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #8A7D82;
+
+  font-family: inherit;
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.student-upload-remove-file:hover {
+  background: #F9EEF2;
+
+  color: var(--burgundy);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.student-upload-error {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 12px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #F2D4DC;
+  border-radius: 8px;
+
+  background: var(--danger-bg);
+
+  color: var(--danger-text);
+
+  font-size: 11px;
+}
+
+.student-upload-error span {
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--danger-text);
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   FORMAT INFO
+========================= */
+
+.student-upload-format-info {
+  margin-top: 14px;
+
+  padding: 14px 16px;
+
+  border-radius: 9px;
+
+  background: #FBF5F7;
+}
+
+.student-upload-format-info strong {
+  color: var(--burgundy);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.student-upload-format-info ul {
+  margin: 8px 0 0;
+
+  padding-left: 17px;
+
+  color: #71676B;
+
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.student-upload-actions,
+.student-upload-result-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.student-upload-primary-button,
+.student-upload-secondary-button {
+  min-width: 104px;
+
+  padding: 9px 16px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.student-upload-primary-button {
+  border: 1px solid var(--burgundy);
+
+  background: var(--burgundy);
+
+  color: #ffffff;
+}
+
+.student-upload-primary-button:hover:not(:disabled) {
+  border-color: var(--burgundy-dark);
+
+  background: var(--burgundy-dark);
+}
+
+.student-upload-primary-button:disabled {
+  border-color: #DED7D9;
+
+  background: #E7E2E4;
+
+  color: #A89FA2;
+
+  cursor: not-allowed;
+}
+
+.student-upload-secondary-button {
+  border: 1px solid #E7DDE0;
+
+  background: #ffffff;
+
+  color: #5F575A;
+}
+
+.student-upload-secondary-button:hover {
+  background: #FAF7F8;
+}
+
+
+/* =========================
+   UPLOADING
+========================= */
+
+.student-upload-loading {
+  padding: 28px 8px 12px;
+
+  text-align: center;
+}
+
+.student-upload-loading-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 16px;
+
+  border-radius: 14px;
+
+  background: #F9EEF2;
+
+  color: var(--burgundy);
+}
+
+.student-upload-loading h2 {
+  margin: 0 0 7px;
+
+  color: #282225;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.student-upload-loading > p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+}
+
+.student-upload-progress-wrapper {
+  width: 100%;
+
+  margin-top: 28px;
+}
+
+.student-upload-progress-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 7px;
+
+  color: #71676B;
+
+  font-size: 10px;
+}
+
+.student-upload-progress-info span {
+  overflow: hidden;
+
+  flex: 1;
+
+  text-align: left;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.student-upload-progress-info strong {
+  color: var(--burgundy);
+
+  font-size: 11px;
+}
+
+.student-upload-progress-track {
+  width: 100%;
+  height: 7px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #F0E7EA;
+}
+
+.student-upload-progress-bar {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: var(--burgundy);
+
+  transition: width 0.12s linear;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.student-upload-result {
+  padding: 12px 2px 2px;
+
+  text-align: center;
+}
+
+.student-upload-success-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: var(--success-bg);
+
+  color: var(--success-text);
+}
+
+.student-upload-result h2 {
+  margin: 0 0 6px;
+
+  color: #282225;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.student-upload-result-description {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+}
+
+.student-upload-result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.student-upload-result-card {
+  min-height: 86px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding: 13px 10px;
+
+  border-radius: 9px;
+}
+
+.student-upload-result-card strong {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.student-upload-result-card span {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.student-upload-result-card.success {
+  background: var(--success-bg);
+
+  color: var(--success-text);
+}
+
+.student-upload-result-card.duplicate {
+  background: var(--warning-bg);
+
+  color: var(--warning-text);
+}
+
+.student-upload-result-card.invalid {
+  background: var(--danger-bg);
+
+  color: var(--danger-text);
+}
+
+.student-upload-result-total {
+  margin-top: 14px;
+
+  color: #82777B;
+
+  font-size: 10px;
+}
+
+.student-upload-result-total strong {
+  color: #4E4548;
+}
+
+
+/* =========================
+   PROBLEM TABLE
+========================= */
+
+.student-upload-problem-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid #F0E7EA;
+  border-radius: 9px;
+}
+
+.student-upload-problem-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.student-upload-problem-table thead {
+  background: #FBF7F8;
+}
+
+.student-upload-problem-table th {
+  padding: 10px;
+
+  border-bottom: 1px solid #EEE4E7;
+
+  color: var(--burgundy);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-align: left;
+}
+
+.student-upload-problem-table td {
+  padding: 11px 10px;
+
+  border-bottom: 1px solid #F6F2F3;
+
+  color: #5F575A;
+
+  font-size: 10px;
+
+  vertical-align: top;
+}
+
+.student-upload-problem-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.student-upload-problem-table th:nth-child(1),
+.student-upload-problem-table td:nth-child(1) {
+  width: 12%;
+}
+
+.student-upload-problem-table th:nth-child(2),
+.student-upload-problem-table td:nth-child(2) {
+  width: 25%;
+}
+
+.student-upload-problem-table th:nth-child(3),
+.student-upload-problem-table td:nth-child(3) {
+  width: 27%;
+}
+
+.student-upload-problem-table th:nth-child(4),
+.student-upload-problem-table td:nth-child(4) {
+  width: 36%;
+}
+
+.student-upload-problem-text {
+  color: var(--danger-text);
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   DETAIL FOOTER
+========================= */
+
+.student-upload-detail-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  margin-top: 16px;
+}
+
+.student-upload-detail-footer p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .student-upload-overlay {
+    padding: 12px;
+  }
+
+  .student-upload-modal {
+    padding: 20px;
+  }
+
+  .student-upload-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-upload-actions,
+  .student-upload-result-actions,
+  .student-upload-detail-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .student-upload-primary-button,
+  .student-upload-secondary-button {
+    width: 100%;
+  }
+
+  .student-upload-detail-footer p {
+    text-align: left;
+  }
+}

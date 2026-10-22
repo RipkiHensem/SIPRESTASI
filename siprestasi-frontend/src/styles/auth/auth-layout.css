@@ -1,0 +1,699 @@
+:root {
+  --burgundy: #7e1f4e;
+  --burgundy-medium: #8c3962;
+  --rose: #c487a6;
+
+  --text-primary: #231f20;
+  --text-secondary: #77727a;
+
+  --border: #e7dde1;
+  --surface: #ffffff;
+
+  --error: #b23a48;
+  --success: #2f855a;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: #fbfbfb;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.auth-card {
+  width: min(1160px, 100%);
+  min-height: 680px;
+
+  display: grid;
+  grid-template-columns: 39% 61%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #eadfe3;
+  border-radius: 22px;
+
+  box-shadow:
+    0 22px 48px rgba(58, 24, 39, 0.11);
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.auth-sidebar {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px 42px 38px;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 12% 7%,
+      rgba(225, 156, 188, 0.55) 0%,
+      rgba(196, 135, 166, 0.28) 20%,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 92% 18%,
+      rgba(168, 75, 117, 0.24) 0%,
+      transparent 38%
+    ),
+    linear-gradient(
+      155deg,
+      #a04370 0%,
+      #8c2f5d 24%,
+      #7e1f4e 50%,
+      #6b173d 76%,
+      #55102f 100%
+    );
+}
+
+
+/* =========================
+   PATTERN
+========================= */
+
+.auth-sidebar::after {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    );
+
+  background-size: 20px 20px;
+
+  opacity: 0.14;
+}
+
+
+/* =========================
+   CONTENT ABOVE PATTERN
+========================= */
+
+.auth-sidebar > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.brand-logo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  box-shadow: none;
+}
+
+.brand-logo {
+  height: 62px;
+  width: auto;
+  max-width: 250px;
+
+  display: block;
+
+  object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(255, 255, 255, 0.45));
+}
+
+
+/* =========================
+   BRAND COPY
+========================= */
+
+.brand-copy {
+  min-width: 0;
+}
+
+.brand-name {
+  color: #ffffff;
+
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.brand-subtitle {
+  margin-top: 5px;
+
+  color:
+    rgba(255, 255, 255, 0.91);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.35px;
+}
+
+
+/* =========================
+   SIDEBAR CONTENT
+========================= */
+
+.sidebar-content {
+  margin-top: 165px;
+
+  padding-top: 0px;
+}
+
+.sidebar-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.sidebar-content > p {
+  max-width: 340px;
+
+  margin: 12px 0 28px;
+
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   STEPPER
+========================= */
+
+.registration-steps {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================
+   STEP DEFAULT
+========================= */
+
+.registration-step {
+  min-height: 68px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 12px 15px;
+
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.19);
+
+  border-radius: 13px;
+
+  background:
+    rgba(255, 255, 255, 0.065);
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+/* =========================
+   STEP ACTIVE
+========================= */
+
+.registration-step.active {
+  color: var(--text-primary);
+
+  border-color: #ffffff;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 20px
+    rgba(51, 9, 29, 0.12);
+}
+
+
+/* =========================
+   STEP NUMBER
+========================= */
+
+.step-number {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.38);
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   ACTIVE NUMBER
+========================= */
+
+.registration-step.active
+.step-number {
+  color: #ffffff;
+
+  border-color: var(--burgundy);
+
+  background: var(--burgundy);
+}
+
+
+/* =========================
+   STEP CONTENT
+========================= */
+
+.step-content {
+  min-width: 0;
+}
+
+.step-title-row {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.step-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.step-subtitle {
+  margin-top: 2px;
+
+  font-size: 12px;
+
+  opacity: 0.72;
+}
+
+
+/* =========================
+   ACTIVE TEXT
+========================= */
+
+.registration-step.active
+.step-title {
+  color: var(--text-primary);
+}
+
+.registration-step.active
+.step-subtitle {
+  color: var(--text-secondary);
+
+  opacity: 1;
+}
+
+
+/* =========================
+   COMPLETED STEP
+========================= */
+
+.registration-step.completed
+.step-number {
+  color: #ffffff;
+
+  border-color:
+    rgba(255, 255, 255, 0.28);
+
+  background:
+    rgba(255, 255, 255, 0.18);
+}
+
+.step-completed-badge {
+  padding: 2px 7px;
+
+  color:
+    rgba(255, 255, 255, 0.94);
+
+  border-radius: 5px;
+
+  background:
+    rgba(255, 255, 255, 0.14);
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.auth-main {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 50px 54px;
+
+  background: #ffffff;
+}
+
+
+/* =========================
+   REGISTER CONTAINER
+========================= */
+
+.register-container {
+  width: 100%;
+  max-width: 560px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.form-heading {
+  margin-bottom: 28px;
+}
+
+.form-heading h2 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.form-heading p {
+  margin: 7px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.field-error {
+  margin: 6px 0 0;
+
+  color: var(--error);
+
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.input-error {
+  border-color:
+    var(--error) !important;
+}
+
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.primary-button {
+  width: 100%;
+  height: 52px;
+
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: var(--burgundy);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 12px
+    rgba(126, 31, 78, 0.16);
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #6d173f;
+
+  box-shadow:
+    0 7px 16px
+    rgba(126, 31, 78, 0.2);
+}
+
+.primary-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+
+/* =========================
+   BUTTON DISABLED
+========================= */
+
+.primary-button:disabled {
+  color: #ffffff;
+
+  background: #d8d3d6;
+
+  box-shadow: none;
+
+  cursor: not-allowed;
+
+  opacity: 1;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+
+  .auth-page {
+    padding: 24px;
+  }
+
+  .auth-card {
+    grid-template-columns:
+      40% 60%;
+  }
+
+  .auth-sidebar {
+    padding: 34px;
+  }
+
+  .brand-logo {
+    width: 76px;
+  }
+
+  .brand-name {
+    font-size: 21px;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+  }
+
+  .sidebar-content {
+    padding-top: 90px;
+  }
+
+  .sidebar-content h1 {
+    font-size: 25px;
+  }
+
+  .sidebar-content > p {
+    font-size: 14px;
+  }
+
+  .auth-main {
+    padding: 48px 38px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .auth-page {
+    padding: 0;
+
+    align-items: flex-start;
+  }
+
+  .auth-card {
+    display: block;
+
+    min-height: 100vh;
+
+    border: 0;
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+  .auth-sidebar {
+    padding: 28px 24px;
+
+    background:
+      radial-gradient(
+        circle at 90% 8%,
+        rgba(211, 137, 169, 0.2) 0%,
+        transparent 38%
+      ),
+      linear-gradient(
+        155deg,
+        #8b2053 0%,
+        #771b47 46%,
+        #58102f 100%
+      );
+  }
+
+  .sidebar-brand {
+    gap: 12px;
+  }
+
+  .brand-logo {
+    width: 70px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+
+  .brand-subtitle {
+    font-size: 9px;
+  }
+
+  .sidebar-content {
+    margin-top: 38px;
+    padding-top: 0;
+  }
+
+  .sidebar-content h1 {
+    font-size: 26px;
+  }
+
+  .sidebar-content > p {
+    margin-bottom: 0;
+
+    font-size: 14px;
+  }
+
+  .registration-steps {
+    display: none;
+  }
+
+  .auth-main {
+    padding: 42px 24px;
+  }
+
+  .register-container {
+    max-width: none;
+  }
+
+  .form-heading h2 {
+    font-size: 28px;
+  }
+
+}

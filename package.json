@@ -1,0 +1,10 @@
+{
+  "name": "siprestasi-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm --prefix siprestasi-frontend run build",
+    "check": "npm --prefix siprestasi-frontend run lint",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

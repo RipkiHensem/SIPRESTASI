@@ -1,0 +1,302 @@
+:root {
+  --burgundy: #6D1735;
+}
+
+.admin-top-section {
+  width: 100%;
+  min-height: 420px;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 92% 8%,
+      rgba(109, 23, 53, 0.18) 0%,
+      rgba(109, 23, 53, 0.10) 12%,
+      transparent 28%
+    ),
+    linear-gradient(
+      90deg,
+      #8E365D 0%,
+      #A65276 32%,
+      #C58AA3 58%,
+      #E7CDD9 80%,
+      #F8F3F6 100%
+    );
+}
+
+.admin-top-section::before {
+  content: '';
+
+  position: absolute;
+  left: -120px;
+  bottom: -54px;
+
+  width: 430px;
+  height: 105px;
+
+  border-radius: 0 0 55% 55%;
+
+  background: #7A1D3E;
+
+  transform: rotate(4deg);
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+.admin-top-section::after {
+  content: '';
+
+  position: absolute;
+  right: -130px;
+  bottom: -52px;
+
+  width: 430px;
+  height: 110px;
+
+  border-radius: 0 0 55% 55%;
+
+  background: #D39AAF;
+
+  transform: rotate(-4deg);
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+.admin-top-section::before,
+.admin-top-section::after {
+  display: none;
+}
+
+.admin-header {
+  width: 100%;
+  min-height: 270px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 2;
+
+  padding: 34px 58px 92px;
+
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.admin-header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.admin-header-action {
+  position: relative;
+  z-index: 2;
+}
+
+.admin-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.admin-header-badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 20px;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: var(--burgundy);
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.admin-header h1 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.admin-header p {
+  margin: 0 0 20px;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.admin-header-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.admin-header-period {
+  padding: 4px 8px;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+  color: var(--burgundy);
+
+  font-weight: 600;
+}
+
+.admin-header-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  position: relative;
+  z-index: 4;
+
+  margin-top: 42px;
+
+  padding: 12px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: var(--burgundy);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.admin-header-action:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 18px
+    rgba(109, 23, 53, 0.12);
+}
+
+@media (max-width: 700px) {
+  .admin-header {
+    min-height: auto;
+
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 24px 20px;
+  }
+
+  .admin-header-action {
+    align-self: flex-start;
+  }
+}
+
+/* =========================
+   HEADER ARTWORK
+========================= */
+
+.admin-header-art {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+.header-wave {
+  position: absolute;
+
+  right: -170px;
+  bottom: -95px;
+
+  border-radius: 50% 0 0 0;
+}
+
+.wave-one {
+  width: 640px;
+  height: 235px;
+
+  background: rgba(232, 157, 184, 0.34);
+
+  transform: rotate(-8deg);
+}
+
+.wave-two {
+  width: 505px;
+  height: 205px;
+
+  right: -95px;
+  bottom: -82px;
+
+  background: rgba(183, 83, 121, 0.28);
+
+  transform: rotate(-12deg);
+}
+
+.wave-three {
+  width: 360px;
+  height: 178px;
+
+  right: -25px;
+  bottom: -70px;
+
+  background: rgba(115, 31, 66, 0.20);
+
+  transform: rotate(-16deg);
+}
+
+.admin-header-art {
+  display: none;
+}
+
+.admin-header-art::before {
+  content: '';
+
+  position: absolute;
+
+  right: -95px;
+  bottom: 7px;
+
+  width: 690px;
+  height: 185px;
+
+  border-top: 1.3px solid rgba(255, 255, 255, 0.58);
+
+  border-radius: 50%;
+
+  transform: rotate(-13deg);
+
+  pointer-events: none;
+}

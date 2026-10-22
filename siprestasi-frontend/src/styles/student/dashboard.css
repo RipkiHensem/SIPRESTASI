@@ -1,0 +1,772 @@
+/* =========================
+   PAGE
+========================= */
+
+.student-dashboard-page {
+  min-height: 100vh;
+
+  background: #ffffff;
+  color: #231f20;
+}
+
+.dashboard-container {
+  width: min(1400px, calc(100% - 64px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.dashboard-hero {
+  padding: 42px 0 40px;
+
+  background: linear-gradient(
+    105deg,
+    #7e1f4e 0%,
+    #914065 32%,
+    #b66f91 58%,
+    #ead2de 82%,
+    #faf6f8 100%
+  );
+}
+
+.dashboard-hero-label {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 27px;
+
+  padding: 0 11px;
+  margin-bottom: 14px;
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.dashboard-hero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.dashboard-hero p {
+  max-width: 620px;
+
+  margin: 9px 0 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.dashboard-main {
+  padding: 32px 0 56px;
+}
+
+
+/* =========================
+   REGISTRATION
+========================= */
+
+.dashboard-registration {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  padding: 26px 28px;
+
+  border: 1px solid #e8dde2;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 18px rgba(65, 29, 46, 0.04);
+}
+
+.dashboard-registration-copy {
+  max-width: 760px;
+}
+
+.registration-status {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 27px;
+
+  margin-bottom: 11px;
+  padding: 0 10px;
+
+  color: #756e73;
+
+  border: 1px solid #e1dade;
+  border-radius: 999px;
+
+  background: #f8f6f7;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.dashboard-registration h2 {
+  margin: 0;
+
+  color: #2f292c;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.dashboard-registration p {
+  margin: 7px 0 0;
+
+  color: #817a80;
+
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.dashboard-primary-button {
+  min-width: 190px;
+  height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  padding: 0 18px;
+
+  color: #ffffff;
+
+  border: 1px solid #7e1f4e;
+  border-radius: 9px;
+
+  background: #7e1f4e;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+.dashboard-primary-button:hover {
+  background: #6d1735;
+}
+
+.dashboard-primary-button:active {
+  transform: translateY(1px);
+}
+
+
+/* =========================
+   CONTENT GRID
+========================= */
+
+.dashboard-content-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(330px, 0.75fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  margin-top: 24px;
+}
+
+
+/* =========================
+   PANEL
+========================= */
+
+.dashboard-panel {
+  border: 1px solid #e8dde2;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 16px rgba(65, 29, 46, 0.03);
+}
+
+.stage-one-panel,
+.selection-panel {
+  padding: 24px;
+}
+
+.dashboard-panel-heading {
+  margin-bottom: 20px;
+}
+
+.dashboard-section-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #9a4d72;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.dashboard-panel-heading h2 {
+  margin: 0;
+
+  color: #302a2d;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.dashboard-panel-heading p {
+  margin: 5px 0 0;
+
+  color: #91898f;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   STAGE ONE LIST
+========================= */
+
+.stage-one-list {
+  overflow: hidden;
+
+  border-top: 1px solid #eee6e9;
+}
+
+.stage-one-row {
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 13px 2px;
+
+  border-bottom: 1px solid #eee6e9;
+}
+
+.stage-one-row:last-child {
+  border-bottom: 0;
+}
+
+.stage-one-row-main {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.stage-one-row-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #7e1f4e;
+
+  border-radius: 9px;
+
+  background: #faf1f5;
+}
+
+.stage-one-row-copy {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.stage-one-row-copy span {
+  color: #837b81;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stage-one-row-copy strong {
+  overflow: hidden;
+
+  color: #302a2d;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stage-one-row-copy .stage-one-empty-value {
+  color: #91898f;
+
+  font-weight: 500;
+}
+
+.stage-one-row-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  flex-shrink: 0;
+
+  min-height: 27px;
+
+  padding: 0 9px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.stage-one-row-status.is-available {
+  color: #2f855a;
+
+  border: 1px solid #c8e2d0;
+
+  background: #f3faf5;
+}
+
+.stage-one-row-status.is-empty {
+  color: #827a80;
+
+  border: 1px solid #e1dade;
+
+  background: #f8f6f7;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.selection-timeline {
+  margin-top: 2px;
+}
+
+.selection-step {
+  display: flex;
+
+  gap: 13px;
+}
+
+.selection-marker-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  flex-shrink: 0;
+}
+
+.selection-number {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #898187;
+
+  border: 1px solid #ded6da;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.selection-step.is-current .selection-number {
+  color: #ffffff;
+
+  border-color: #7e1f4e;
+
+  background: #7e1f4e;
+}
+
+.selection-line {
+  width: 1px;
+  height: 42px;
+
+  margin: 5px 0;
+
+  background: #e3dadd;
+}
+
+.selection-copy {
+  min-width: 0;
+
+  padding: 4px 0 26px;
+}
+
+.selection-step:last-child .selection-copy {
+  padding-bottom: 0;
+}
+
+.selection-title-row {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.selection-title-row strong {
+  color: #393235;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.selection-title-row span {
+  padding: 3px 7px;
+
+  color: #7e1f4e;
+
+  border-radius: 999px;
+
+  background: #faf1f5;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.selection-copy p {
+  margin: 4px 0 0;
+
+  color: #91898f;
+
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+
+/* =========================
+   PRADITA VALUE
+========================= */
+
+.dashboard-pradita-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-top: 22px;
+  padding: 22px 24px;
+
+  border: 1px solid #e6d9df;
+  border-left: 4px solid #7e1f4e;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 16px rgba(65, 29, 46, 0.03);
+}
+
+.dashboard-pradita-main {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 0;
+}
+
+.dashboard-pradita-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #7e1f4e;
+
+  border-radius: 10px;
+
+  background: #faf1f5;
+}
+
+.dashboard-pradita-copy > span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #9a4d72;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.dashboard-pradita-copy h2 {
+  margin: 0;
+
+  color: #302a2d;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.dashboard-pradita-copy p {
+  margin: 4px 0 0;
+
+  color: #817980;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.dashboard-pradita-status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  flex-shrink: 0;
+
+  min-height: 30px;
+
+  padding: 0 10px;
+
+  color: #777076;
+
+  border: 1px solid #ded7da;
+  border-radius: 999px;
+
+  background: #f8f6f7;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.dashboard-information {
+  margin-top: 22px;
+  padding: 22px 24px;
+
+  border: 1px solid #e8dde2;
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.dashboard-information-heading {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid #eee6e9;
+}
+
+.dashboard-information-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #7e1f4e;
+
+  border-radius: 8px;
+
+  background: #faf1f5;
+}
+
+.dashboard-information-heading h2 {
+  margin: 0;
+
+  color: #302a2d;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.dashboard-information-heading p {
+  margin: 3px 0 0;
+
+  color: #91898f;
+
+  font-size: 12px;
+}
+
+.dashboard-information-list {
+  display: grid;
+
+  gap: 10px;
+
+  padding-top: 16px;
+}
+
+.dashboard-information-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 9px;
+}
+
+.dashboard-information-item > span {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  margin-top: 7px;
+
+  border-radius: 50%;
+
+  background: #7e1f4e;
+}
+
+.dashboard-information-item p {
+  margin: 0;
+
+  color: #6f686d;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .dashboard-container {
+    width: min(100% - 40px, 1400px);
+  }
+
+  .dashboard-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-registration {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .dashboard-container {
+    width: min(100% - 28px, 1400px);
+  }
+
+  .dashboard-hero {
+    padding: 32px 0;
+  }
+
+  .dashboard-hero h1 {
+    font-size: 26px;
+  }
+
+  .dashboard-hero p {
+    font-size: 14px;
+  }
+
+  .dashboard-main {
+    padding-top: 22px;
+  }
+
+  .dashboard-registration,
+  .stage-one-panel,
+  .selection-panel,
+  .dashboard-information {
+    padding: 19px;
+  }
+
+  .dashboard-registration h2 {
+    font-size: 18px;
+  }
+
+  .dashboard-primary-button {
+    width: 100%;
+  }
+
+  .stage-one-row {
+    align-items: flex-start;
+  }
+
+  .stage-one-row-status {
+    margin-top: 4px;
+  }
+
+  .dashboard-pradita-card {
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding: 19px;
+  }
+}

@@ -1,0 +1,64 @@
+<?php
+
+use CodeIgniter\Router\RouteCollection;
+
+$routes->get('/', 'Home::index');
+$routes->get('portal', 'StudentPortalController::show', ['filter' => 'auth:mahasiswa']);
+$routes->put('portal/form', 'StudentPortalController::saveForm', ['filter' => 'auth:mahasiswa']);
+$routes->get('portal/public', 'StudentPortalController::publicStatus');
+$routes->get('portal/document/(:segment)', 'StudentPortalController::document/$1', ['filter' => 'auth:mahasiswa']);
+$routes->delete('portal/document/(:segment)', 'StudentPortalController::removeDocument/$1', ['filter' => 'auth:mahasiswa']);
+$routes->post('auth/register', 'AuthController::register');
+$routes->post('auth/login', 'AuthController::login');
+$routes->post('auth/logout', 'AuthController::logout', ['filter' => 'auth']);
+$routes->post('pengajuan', 'PengajuanController::create', ['filter' => 'auth:mahasiswa']);
+$routes->get('pengajuan/me', 'PengajuanController::me', ['filter' => 'auth:mahasiswa']);
+$routes->post('pengajuan/prestasi', 'PengajuanController::uploadPrestasi', ['filter' => 'auth:mahasiswa']);
+$routes->post('pengajuan/organisasi', 'PengajuanController::uploadOrganisasi', ['filter' => 'auth:mahasiswa']);
+$routes->post('pengajuan/bahasa', 'PengajuanController::uploadBahasa', ['filter' => 'auth:mahasiswa']);
+$routes->put('pengajuan/peer-reviewers', 'PengajuanController::setPeerReviewers', ['filter' => 'auth:mahasiswa']);
+$routes->post('pengajuan/submit', 'PengajuanController::submit', ['filter' => 'auth:mahasiswa']);
+$routes->get('pengajuan/ranking', 'PengajuanController::ranking', ['filter' => 'auth:admin,superadmin']);
+$routes->post('master-data/import', 'MasterDataController::import', ['filter' => 'auth:admin,superadmin']);
+$routes->get('master-data/template', 'MasterDataController::template', ['filter' => 'auth:admin,superadmin']);
+$routes->post('periode', 'PeriodeController::create', ['filter' => 'auth:admin,superadmin']);
+$routes->get('periode/current', 'PeriodeController::current', ['filter' => 'auth']);
+$routes->put('pengajuan/(:num)/lecturer-reviewers', 'PengajuanController::setLecturerReviewers/$1', ['filter' => 'auth:admin,superadmin']);
+$routes->post('pv-questionnaire', 'PvQuestionnaireController::create', ['filter' => 'auth:admin,superadmin']);
+$routes->post('pv-questionnaire/(:num)/questions', 'PvQuestionnaireController::addQuestion/$1', ['filter' => 'auth:admin,superadmin']);
+$routes->get('pv-questionnaire/active', 'PvQuestionnaireController::active', ['filter' => 'auth']);
+$routes->get('pv-respond/(:any)', 'PvResponseController::form/$1');
+$routes->post('pv-respond/(:any)', 'PvResponseController::submit/$1');
+$routes->put('pengajuan/(:num)/validasi/(:segment)', 'ValidasiController::updateStatus/$1/$2', ['filter' => 'auth:admin,superadmin']);
+
+// Admin & Superadmin pengajuan list, detail, and document download
+$routes->get('admin/pengajuan', 'PengajuanController::indexAdmin', ['filter' => 'auth:admin,superadmin']);
+$routes->get('admin/pengajuan/(:segment)', 'PengajuanController::detailAdmin/$1', ['filter' => 'auth:admin,superadmin']);
+$routes->put('admin/pengajuan/(:num)/status', 'PengajuanController::updateStatusAdmin/$1', ['filter' => 'auth:admin,superadmin']);
+$routes->get('admin/document/(:num)/(:segment)', 'PengajuanController::downloadDocumentAdmin/$1/$2', ['filter' => 'auth:admin,superadmin']);
+$routes->get('admin/pradita-value', 'PengajuanController::praditaValueAdmin', ['filter' => 'auth:admin,superadmin']);
+$routes->post('admin/pengajuan/(:num)/pv-send', 'PengajuanController::sendPvAdmin/$1', ['filter' => 'auth:admin,superadmin']);
+$routes->get('admin/dosen', 'PengajuanController::listDosen', ['filter' => 'auth:admin,superadmin']);
+
+// Superadmin
+$routes->get('superadmin/users', 'SuperAdminController::users', ['filter' => 'auth:superadmin']);
+$routes->post('superadmin/users', 'SuperAdminController::create', ['filter' => 'auth:superadmin']);
+$routes->put('superadmin/users/(:num)/role', 'SuperAdminController::updateRole/$1', ['filter' => 'auth:superadmin']);
+$routes->put('superadmin/users/(:num)/status', 'SuperAdminController::updateStatus/$1', ['filter' => 'auth:superadmin']);
+$routes->delete('superadmin/users/(:num)', 'SuperAdminController::delete/$1', ['filter' => 'auth:superadmin']);
+$routes->get('superadmin/logs', 'LogController::all', ['filter' => 'auth:superadmin']);
+
+// Admin: hanya log aksi milik sendiri
+$routes->get('admin/logs', 'LogController::mine', ['filter' => 'auth:admin']);
+
+// Profile (semua role yang sudah login)
+$routes->get('profile', 'ProfileController::show', ['filter' => 'auth']);
+$routes->put('profile', 'ProfileController::update', ['filter' => 'auth']);
+$routes->put('profile/password', 'ProfileController::changePassword', ['filter' => 'auth']);
+$routes->get('profile/picture', 'ProfileController::picture', ['filter' => 'auth']);
+$routes->post('profile/picture', 'ProfileController::uploadPicture', ['filter' => 'auth']);
+$routes->delete('profile/picture', 'ProfileController::deletePicture', ['filter' => 'auth']);
+
+// Registration OTP
+$routes->post('auth/register/otp', 'RegistrationOtpController::sendOtp');
+$routes->post('auth/register/otp/verify', 'RegistrationOtpController::verifyOtp');

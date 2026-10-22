@@ -1,0 +1,318 @@
+/* =========================
+   VERIFY EMAIL
+========================= */
+
+.otp-email-card {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 18px;
+
+  border: 1px solid #eadfe3;
+  border-radius: 14px;
+
+  background: #fff7fa;
+}
+
+.otp-email-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--burgundy);
+
+  border: 1px solid #eadde2;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.otp-email-card span {
+  display: block;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+.otp-email-card strong {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--burgundy);
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.otp-email-card p {
+  margin: 4px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+/* =========================
+   OTP SECTION
+========================= */
+
+.otp-section {
+  margin-top: 28px;
+}
+
+.otp-section > label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  text-align: center;
+
+  color: #54505a;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+/* =========================
+   OTP INPUT GROUP
+========================= */
+
+.otp-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.otp-input-group input {
+  width: 54px;
+  height: 58px;
+
+  padding: 0;
+
+  text-align: center;
+
+  color: var(--text-primary);
+
+  border: 1px solid #e6dce0;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.otp-input-group input:focus {
+  border-color: var(--burgundy);
+
+  box-shadow: 0 0 0 3px rgba(126, 31, 78, 0.1);
+
+  background: #fffafb;
+}
+
+.otp-input-error {
+  border-color: var(--error) !important;
+
+  background: #fff8f9 !important;
+}
+
+/* =========================
+   TIMER
+========================= */
+
+.otp-timer-row {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 16px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+.otp-timer-row strong {
+  padding: 4px 8px;
+
+  color: var(--burgundy);
+
+  border-radius: 6px;
+
+  background: #f8eef3;
+
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.otp-time-warning {
+  color: var(--error) !important;
+
+  background: #fff1f3 !important;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.otp-error {
+  margin: 12px 0 0;
+
+  text-align: center;
+
+  color: var(--error);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   SUCCESS
+========================= */
+
+.otp-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 12px;
+
+  color: var(--success);
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   VERIFY BUTTON
+========================= */
+
+.otp-verify-button {
+  margin-top: 28px;
+}
+
+/* =========================
+   RESEND OTP
+========================= */
+
+.otp-resend {
+  margin-top: 12px;
+
+  text-align: center;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+.otp-resend strong {
+  color: var(--burgundy);
+
+  font-family: monospace;
+}
+
+.otp-resend button {
+  padding: 0;
+
+  color: var(--burgundy);
+
+  border: 0;
+
+  background: transparent;
+
+  font: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.otp-resend button:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .otp-input-group {
+    gap: 9px;
+  }
+
+  .otp-input-group input {
+    width: 48px;
+    height: 54px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .otp-email-card {
+    align-items: flex-start;
+  }
+
+  .otp-input-group {
+    gap: 8px;
+  }
+
+  .otp-input-group input {
+    width: 42px;
+    height: 50px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .otp-input-group {
+    gap: 6px;
+  }
+
+  .otp-input-group input {
+    width: 38px;
+    height: 48px;
+  }
+
+  .otp-email-card strong {
+    font-size: 14px;
+  }
+
+  .otp-timer-row {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 8px;
+  }
+}

@@ -1,0 +1,941 @@
+/* =========================
+   REGISTER FORM
+========================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  column-gap: 25px;
+  row-gap: 22px;
+}
+
+.form-group {
+  min-width: 0;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--text-primary);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group label span {
+  color: #c83f52;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.form-group > input,
+.password-input {
+  width: 100%;
+  height: 52px;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.form-group > input {
+  padding: 0 16px;
+
+  outline: none;
+
+  color: var(--text-primary);
+
+  font-size: 15px;
+}
+
+.form-group input::placeholder {
+  color: #8b858d;
+}
+
+.form-group > input:focus,
+.password-input:focus-within {
+  border-color: var(--burgundy-medium);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(140, 57, 98, 0.1);
+}
+
+
+/* =========================
+   EMAIL VERIFICATION
+========================= */
+
+.email-verification-field {
+  width: 100%;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.email-verification-field:focus-within {
+  border-color:
+    var(--burgundy-medium);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(140, 57, 98, 0.1);
+}
+
+.email-verification-field.input-error {
+  border-color:
+    var(--error);
+}
+
+.email-verification-field.is-verified {
+  border-color:
+    #a8d6bd;
+}
+
+.email-verification-field input {
+  min-width: 0;
+  height: 100%;
+
+  flex: 1;
+
+  padding: 0 16px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--text-primary);
+
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.email-verify-button {
+  min-width: 105px;
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-right: 7px;
+  padding: 0 15px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: var(--burgundy);
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.email-verify-button:hover:not(
+  :disabled
+) {
+  background: #68153f;
+}
+
+.email-verify-button:disabled {
+  opacity: 0.42;
+
+  cursor: not-allowed;
+}
+
+.email-verified-badge {
+  min-width: 98px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  flex-shrink: 0;
+
+  margin-right: 8px;
+  padding: 0 11px;
+
+  color: #2f855a;
+
+  border-radius: 8px;
+
+  background: #eef8f2;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.email-verification-success {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin: 6px 0 0;
+
+  color: #2f855a;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   HELPER
+========================= */
+
+.field-helper,
+.password-helper,
+.password-match,
+.password-mismatch {
+  margin: 6px 0 0;
+
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.field-helper,
+.password-helper {
+  color: #847e86;
+}
+
+.password-mismatch {
+  color: var(--error);
+}
+
+
+/* =========================
+   PASSWORD INPUT
+========================= */
+
+.password-input {
+  display: flex;
+  align-items: center;
+}
+
+.password-input input {
+  width: 100%;
+  height: 100%;
+
+  padding:
+    0 8px
+    0 16px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--text-primary);
+
+  font-size: 15px;
+}
+
+.password-toggle {
+  width: 46px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #807a82;
+
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  color: var(--burgundy);
+}
+
+
+/* =========================
+   PASSWORD STRENGTH
+========================= */
+
+.password-strength {
+  margin-top: 9px;
+}
+
+.strength-row {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.strength-bars {
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 6px;
+}
+
+.strength-bar {
+  height: 5px;
+
+  border-radius: 999px;
+
+  background: #e6dfe3;
+}
+
+.strength-label {
+  min-width: 38px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* LEMAH */
+
+.strength-1
+.strength-bar.filled {
+  background: #b23a48;
+}
+
+.strength-1
+.strength-label {
+  color: #b23a48;
+}
+
+
+/* CUKUP */
+
+.strength-2
+.strength-bar.filled {
+  background: #d97706;
+}
+
+.strength-2
+.strength-label {
+  color: #c56500;
+}
+
+
+/* KUAT */
+
+.strength-3
+.strength-bar.filled {
+  background: #2f855a;
+}
+
+.strength-3
+.strength-label {
+  color: #2f855a;
+}
+
+
+/* =========================
+   PASSWORD MATCH
+========================= */
+
+.password-match {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: var(--success);
+}
+
+
+/* =========================
+   LOGIN LINK
+========================= */
+
+.auth-bottom-link {
+  margin-top: 20px;
+
+  text-align: center;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+}
+
+.auth-bottom-link a {
+  margin-left: 3px;
+
+  color: var(--burgundy);
+
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-bottom-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   OTP MODAL BACKDROP
+========================= */
+
+.otp-modal-backdrop {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background:
+    rgba(
+      35,
+      31,
+      32,
+      0.28
+    );
+
+  backdrop-filter:
+    blur(3px);
+
+  animation:
+    otpBackdropIn
+    0.18s ease;
+}
+
+
+/* =========================
+   OTP MODAL
+========================= */
+
+.otp-modal {
+  position: relative;
+
+  width: min(
+    100%,
+    500px
+  );
+
+  padding:
+    34px
+    36px
+    30px;
+
+  border:
+    1px solid
+    #eadfe4;
+
+  border-radius:
+    18px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 26px 80px
+    rgba(
+      52,
+      21,
+      37,
+      0.18
+    );
+
+  animation:
+    otpModalIn
+    0.24s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.otp-modal-close {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #847c82;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.otp-modal-close:hover {
+  color: #7e1f4e;
+
+  background: #f7f0f3;
+}
+
+
+/* =========================
+   OTP ICON
+========================= */
+
+.otp-modal-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  color: #7e1f4e;
+
+  border-radius: 14px;
+
+  background: #faf1f5;
+}
+
+
+/* =========================
+   OTP HEADING
+========================= */
+
+.otp-modal-heading h2 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.otp-modal-heading p {
+  max-width: 390px;
+
+  margin:
+    8px
+    0
+    0;
+
+  color:
+    var(--text-secondary);
+
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+
+/* =========================
+   OTP EMAIL
+========================= */
+
+.otp-modal-email {
+  margin-top: 24px;
+
+  padding:
+    14px
+    16px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  border:
+    1px solid
+    #eee4e8;
+
+  border-radius: 11px;
+
+  background:
+    #fcfafb;
+}
+
+.otp-modal-email span {
+  color: #8d858a;
+
+  font-size: 11px;
+}
+
+.otp-modal-email strong {
+  color: #4a4246;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   OTP SECTION
+========================= */
+
+.otp-modal-section {
+  margin-top: 25px;
+}
+
+.otp-modal-section > label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #71686e;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing:
+    0.08em;
+}
+
+
+/* =========================
+   OTP INPUT
+========================= */
+
+.otp-modal-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.otp-modal-input {
+  width: 50px;
+  height: 56px;
+
+  border:
+    1px solid
+    #ddd4d8;
+
+  border-radius: 10px;
+
+  outline: 0;
+
+  background:
+    #ffffff;
+
+  color:
+    var(--text-primary);
+
+  text-align: center;
+
+  font-family: inherit;
+  font-size: 21px;
+  font-weight: 700;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.otp-modal-input:focus {
+  border-color:
+    var(--burgundy-medium);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      140,
+      57,
+      98,
+      0.1
+    );
+}
+
+.otp-modal-input-error {
+  border-color:
+    var(--error);
+}
+
+.otp-modal-divider {
+  margin:
+    0 2px;
+
+  color: #aaa1a6;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   OTP TIMER
+========================= */
+
+.otp-modal-timer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-top: 12px;
+
+  color: #8a8287;
+
+  font-size: 11px;
+}
+
+.otp-modal-timer-row strong {
+  color: #635b60;
+
+  font-size: 12px;
+}
+
+.otp-modal-timer-row
+strong.is-warning {
+  color: #b23a48;
+}
+
+
+/* =========================
+   OTP ERROR
+========================= */
+
+.otp-modal-error {
+  margin:
+    12px
+    0
+    0;
+
+  color:
+    var(--error);
+
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+
+/* =========================
+   OTP BUTTON
+========================= */
+
+.otp-modal-verify-button {
+  width: 100%;
+
+  margin-top: 22px;
+}
+
+
+/* =========================
+   OTP RESEND
+========================= */
+
+.otp-modal-resend {
+  margin-top: 17px;
+
+  text-align: center;
+
+  color: #898187;
+
+  font-size: 12px;
+}
+
+.otp-modal-resend strong {
+  color: #625a5f;
+}
+
+.otp-modal-resend button {
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #7e1f4e;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.otp-modal-resend button:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   OTP SUCCESS
+========================= */
+
+.otp-modal-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 26px;
+
+  padding: 13px;
+
+  color: #2f855a;
+
+  border-radius: 10px;
+
+  background: #eff9f3;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   MODAL ANIMATION
+========================= */
+
+@keyframes otpBackdropIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes otpModalIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(14px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+
+    row-gap: 20px;
+  }
+
+  .form-group-full {
+    grid-column: auto;
+  }
+
+  .primary-button {
+    margin-top: 30px;
+  }
+
+
+  .otp-modal {
+    padding:
+      30px
+      20px
+      26px;
+
+    border-radius: 15px;
+  }
+
+
+  .otp-modal-input-group {
+    gap: 5px;
+  }
+
+
+  .otp-modal-input {
+    width: 40px;
+    height: 50px;
+
+    font-size: 18px;
+  }
+
+
+  .otp-modal-divider {
+    margin: 0;
+  }
+
+
+  .email-verify-button {
+    min-width: 90px;
+
+    padding: 0 11px;
+
+    font-size: 11px;
+  }
+
+
+  .email-verified-badge {
+    min-width: auto;
+
+    font-size: 11px;
+  }
+}

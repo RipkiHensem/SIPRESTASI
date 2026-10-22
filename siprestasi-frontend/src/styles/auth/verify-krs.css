@@ -1,0 +1,1213 @@
+/* =========================
+   VERIFIKASI KRS
+========================= */
+
+.krs-upload-section {
+  width: 100%;
+}
+
+.krs-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--text-primary);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.krs-label span {
+  color: #c83f52;
+}
+
+/* =========================
+   DROPZONE
+========================= */
+
+.krs-dropzone {
+  min-height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 28px;
+
+  text-align: center;
+
+  border: 2px dashed #e7d7de;
+  border-radius: 16px;
+
+  background: #fffafb;
+
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.krs-dropzone:hover {
+  border-color: var(--burgundy-medium);
+
+  background: #fff7fa;
+}
+
+.krs-upload-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  color: var(--burgundy);
+
+  border: 1px solid #eadde2;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.krs-dropzone h3 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.krs-dropzone > p {
+  margin: 6px 0 16px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+}
+
+.krs-select-button {
+  min-width: 120px;
+  height: 40px;
+
+  padding: 0 18px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: var(--burgundy);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.krs-select-button:hover {
+  background: #6d173f;
+}
+
+.krs-file-info {
+  display: block;
+
+  margin-top: 14px;
+
+  color: #847e86;
+
+  font-size: 12px;
+}
+
+.krs-helper {
+  margin: 10px 0 0;
+
+  color: #847e86;
+
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+/* =========================
+   FILE SUDAH DIPILIH
+========================= */
+
+.krs-dropzone-selected {
+  min-height: 180px;
+}
+
+.krs-selected-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  color: var(--burgundy);
+
+  border: 1px solid #eadde2;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.krs-selected-content {
+  text-align: center;
+}
+
+.krs-selected-content h3 {
+  max-width: 430px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: var(--text-primary);
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.krs-selected-content p {
+  margin: 5px 0 16px;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+}
+
+.krs-change-button {
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 15px;
+
+  color: var(--burgundy);
+
+  border: 1px solid var(--burgundy);
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.krs-change-button:hover {
+  background: #fff7fa;
+}
+
+.krs-continue-button {
+  margin-top: 24px;
+}
+
+/* =========================
+   CHECKING FILE CARD
+========================= */
+
+.krs-checking-file-card {
+  width: 100%;
+  min-height: 84px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 16px 18px;
+
+  border: 1px solid #e7dde1;
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.krs-checking-file-left {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.krs-checking-file-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--burgundy);
+
+  border-radius: 11px;
+
+  background: #f8eef3;
+}
+
+.krs-checking-file-info {
+  min-width: 0;
+}
+
+.krs-checking-file-info h3 {
+  max-width: 350px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: var(--text-primary);
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.krs-checking-file-info p {
+  margin: 3px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+}
+
+.krs-checking-badge {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  padding: 7px 13px;
+
+  color: var(--burgundy);
+
+  border-radius: 999px;
+
+  background: #f8eef3;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   CHECKING PANEL
+========================= */
+
+.krs-checking-panel {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 28px 30px;
+
+  text-align: center;
+
+  border: 1px solid #eadfe3;
+  border-radius: 15px;
+
+  background: #fffafb;
+}
+
+.krs-checking-loader {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 15px;
+
+  color: var(--burgundy);
+
+  border: 1px solid #eadde2;
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+.krs-checking-panel h3 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.krs-checking-panel p {
+  margin: 7px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.krs-checking-panel span {
+  display: block;
+
+  margin-top: 14px;
+
+  color: #9a939b;
+
+  font-size: 12px;
+}
+
+/* =========================
+   SPINNER
+========================= */
+
+.krs-spinner {
+  animation: krs-spin 0.9s linear infinite;
+}
+
+@keyframes krs-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .krs-checking-file-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .krs-checking-badge {
+    margin-left: 62px;
+  }
+
+  .krs-checking-file-info h3 {
+    max-width: 220px;
+  }
+
+  .krs-checking-panel {
+    padding: 24px 18px;
+  }
+}
+/* =========================
+   KRS VERIFIED
+========================= */
+
+.krs-verified-file-card {
+  width: 100%;
+  min-height: 84px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 16px 18px;
+
+  border: 1px solid #e1e9e4;
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.krs-verified-file-left {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.krs-verified-file-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--success);
+
+  border-radius: 11px;
+
+  background: #eef8f2;
+}
+
+.krs-verified-file-info {
+  min-width: 0;
+}
+
+.krs-verified-file-info h3 {
+  max-width: 320px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: var(--text-primary);
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.krs-verified-file-info p {
+  margin: 3px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+}
+
+.krs-verified-badge {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  padding: 7px 12px;
+
+  color: var(--success);
+
+  border-radius: 999px;
+
+  background: #eef8f2;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.krs-success-message {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 18px;
+
+  padding: 16px 18px;
+
+  color: #276749;
+
+  border: 1px solid #cfe7d8;
+  border-radius: 12px;
+
+  background: #f1faf5;
+}
+
+.krs-success-message > svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+}
+
+.krs-success-message h3 {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.krs-success-message p {
+  margin: 3px 0 0;
+
+  color: #4f7660;
+
+  font-size: 13px;
+}
+
+/* =========================
+   DATA MAHASISWA
+========================= */
+
+.student-data-card {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 20px;
+
+  border: 1px solid #e7dde1;
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.student-data-card > h3 {
+  margin: 0 0 18px;
+
+  color: var(--text-primary);
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.student-data-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 17px 28px;
+}
+
+.student-data-item {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.student-data-item span {
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+.student-data-item strong {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  color: var(--text-primary);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   KIRIM OTP
+========================= */
+
+.krs-send-otp-button {
+  margin-top: 22px;
+}
+
+.krs-otp-helper {
+  margin: 9px 0 0;
+
+  text-align: center;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+/* =========================
+   VERIFIED MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .krs-verified-file-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .krs-verified-badge {
+    margin-left: 62px;
+  }
+
+  .student-data-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   KRS REJECTED
+========================= */
+
+.krs-rejected-file-card {
+  width: 100%;
+  min-height: 84px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 16px 18px;
+
+  border: 1px solid #ead9dd;
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.krs-rejected-file-left {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.krs-rejected-file-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--error);
+
+  border-radius: 11px;
+
+  background: #fbeff2;
+}
+
+.krs-rejected-file-info {
+  min-width: 0;
+}
+
+.krs-rejected-file-info h3 {
+  max-width: 320px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: var(--text-primary);
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.krs-rejected-file-info p {
+  margin: 3px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+}
+
+.krs-rejected-badge {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  padding: 7px 12px;
+
+  color: var(--error);
+
+  border-radius: 999px;
+
+  background: #fbeff2;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================
+   REJECTED MESSAGE
+========================= */
+
+.krs-rejected-message {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 18px;
+
+  padding: 16px 18px;
+
+  color: #9b3342;
+
+  border: 1px solid #efcbd1;
+  border-radius: 12px;
+
+  background: #fff4f6;
+}
+
+.krs-rejected-message > svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+}
+
+.krs-rejected-message h3 {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.krs-rejected-message p {
+  margin: 3px 0 0;
+
+  color: #895a62;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* =========================
+   VERIFICATION ISSUES
+========================= */
+
+.krs-issues-card {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 20px;
+
+  border: 1px solid #e7dde1;
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.krs-issues-card > h3 {
+  margin: 0 0 15px;
+
+  color: var(--text-primary);
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.krs-issue-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 14px 0;
+
+  border-top: 1px solid #f0e8eb;
+}
+
+.krs-issue-item:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.krs-issue-item > svg {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: var(--error);
+}
+
+.krs-issue-content {
+  width: 100%;
+}
+
+.krs-issue-content > strong {
+  display: block;
+
+  color: var(--text-primary);
+
+  font-size: 14px;
+}
+
+.krs-issue-content > p {
+  margin: 3px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* =========================
+   ACCOUNT VS KRS
+========================= */
+
+.krs-comparison {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+.krs-comparison > div {
+  padding: 11px 12px;
+
+  border-radius: 9px;
+
+  background: #faf7f8;
+}
+
+.krs-comparison span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+}
+
+.krs-comparison strong {
+  display: block;
+
+  color: var(--text-primary);
+
+  font-size: 13px;
+}
+
+/* =========================
+   GANTI FILE
+========================= */
+
+.krs-reupload-button {
+  width: 100%;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 20px;
+
+  color: var(--burgundy);
+
+  border: 1px solid var(--burgundy);
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.krs-reupload-button:hover {
+  background: #fff7fa;
+}
+
+/* =========================
+   VERIFIED DESCRIPTION
+========================= */
+
+.student-data-description {
+  margin: -10px 0 18px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+/* =========================
+   REJECTED MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .krs-rejected-file-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .krs-rejected-badge {
+    margin-left: 62px;
+  }
+
+  .krs-comparison {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   FILE ERROR MODAL
+========================= */
+
+.krs-modal-backdrop {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(35, 17, 26, 0.48);
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.krs-file-modal {
+  position: relative;
+
+  width: min(420px, 100%);
+
+  padding: 30px 28px 26px;
+
+  text-align: center;
+
+  border: 1px solid #eadde2;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 24px 60px
+    rgba(58, 24, 39, 0.22);
+
+  animation:
+    krs-modal-enter 0.18s ease-out;
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.krs-modal-close {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #827a80;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+.krs-modal-close:hover {
+  color: var(--burgundy);
+
+  background: #faf2f6;
+}
+
+
+/* =========================
+   ERROR ICON
+========================= */
+
+.krs-modal-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 17px;
+
+  color: #b23a48;
+
+  border-radius: 50%;
+
+  background: #fff0f2;
+}
+
+
+/* =========================
+   MODAL TEXT
+========================= */
+
+.krs-file-modal h2 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.krs-modal-message {
+  margin: 10px 0 0;
+
+  color: #625c61;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.krs-modal-detail {
+  margin: 4px 0 0;
+
+  color: #8a8389;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   FILE RULE
+========================= */
+
+.krs-modal-rule {
+  margin-top: 18px;
+  padding: 10px 12px;
+
+  color: #7e1f4e;
+
+  border: 1px solid #ead7e0;
+  border-radius: 9px;
+
+  background: #fbf3f7;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   MODAL BUTTON
+========================= */
+
+.krs-modal-button {
+  width: 100%;
+  height: 44px;
+
+  margin-top: 20px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: var(--burgundy);
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.krs-modal-button:hover {
+  background: #6d173f;
+}
+
+.krs-modal-button:active {
+  transform: translateY(1px);
+}
+
+
+/* =========================
+   MODAL ANIMATION
+========================= */
+
+@keyframes krs-modal-enter {
+  from {
+    opacity: 0;
+    transform:
+      translateY(8px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================
+   MODAL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .krs-modal-backdrop {
+    padding: 18px;
+  }
+
+  .krs-file-modal {
+    padding:
+      28px 20px 22px;
+  }
+
+  .krs-file-modal h2 {
+    font-size: 18px;
+  }
+}

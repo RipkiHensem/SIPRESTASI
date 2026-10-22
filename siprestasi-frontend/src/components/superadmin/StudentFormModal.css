@@ -1,0 +1,205 @@
+.student-form-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(28, 18, 22, 0.38);
+
+  backdrop-filter: blur(2px);
+}
+
+
+.student-form-modal {
+  width: 100%;
+  max-width: 480px;
+
+  padding: 24px;
+
+  border: 1px solid #F0E7EA;
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 50px rgba(70, 19, 38, 0.18);
+
+  font-family: 'Titillium Web', sans-serif;
+}
+
+
+/* HEADER */
+
+.student-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+
+.student-form-header h2 {
+  margin: 0 0 4px;
+
+  color: #282225;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+
+.student-form-header p {
+  margin: 0;
+
+  color: #756D70;
+
+  font-size: 11px;
+}
+
+
+.student-form-close {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #81767A;
+
+  font-size: 21px;
+
+  cursor: pointer;
+}
+
+
+.student-form-close:hover {
+  background: #F9F4F6;
+}
+
+
+/* FORM */
+
+.student-form-fields {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+.student-form-fields label {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.student-form-fields label > span {
+  color: #51484C;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+.student-form-fields input,
+.student-form-fields select {
+  width: 100%;
+  min-height: 42px;
+
+  padding: 0 12px;
+
+  border: 1px solid #E8DEE2;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #332D30;
+
+  font-family: inherit;
+  font-size: 11px;
+}
+
+
+.student-form-fields input:focus,
+.student-form-fields select:focus {
+  border-color: #C98BA1;
+
+  box-shadow:
+    0 0 0 3px rgba(109, 23, 53, 0.04);
+}
+
+
+/* ACTION */
+
+.student-form-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+
+.student-form-cancel,
+.student-form-save {
+  min-width: 110px;
+
+  padding: 9px 14px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.student-form-cancel {
+  border: 1px solid #E5DCE0;
+
+  background: #ffffff;
+
+  color: #5F575A;
+}
+
+
+.student-form-save {
+  border: 1px solid #6D1735;
+
+  background: #6D1735;
+
+  color: #ffffff;
+}
+
+
+.student-form-save:disabled {
+  border-color: #DED7D9;
+
+  background: #E7E2E4;
+
+  color: #A89FA2;
+
+  cursor: not-allowed;
+}

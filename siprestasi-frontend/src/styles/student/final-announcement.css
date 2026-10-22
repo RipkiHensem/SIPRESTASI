@@ -1,0 +1,646 @@
+/* =========================================
+   FINAL ANNOUNCEMENT
+========================================= */
+
+.fa-section {
+  margin: 0 0 20px;
+}
+
+.fa-heading {
+  padding: 2px 4px 16px;
+  border-bottom: 1px solid #eadfe5;
+}
+
+.fa-eyebrow {
+  display: block;
+  color: #9c4b70;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.fa-heading h2 {
+  margin: 7px 0 4px;
+  color: #30272c;
+  font-size: 25px;
+}
+
+.fa-heading p {
+  margin: 0;
+  color: #827880;
+  font-size: 13px;
+}
+
+/* =========================================
+   COVERFLOW
+========================================= */
+
+.fa-coverflow {
+  position: relative;
+  isolation: isolate;
+  height: 430px;
+  overflow: hidden;
+}
+
+.fa-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  box-sizing: border-box;
+
+  width: min(535px, 68%);
+  height: 362px;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 30px;
+
+  background: linear-gradient(
+    143deg,
+    #63132f 0%,
+    #7e1f4e 48%,
+    #be7699 100%
+  );
+
+  box-shadow: 0 24px 55px rgba(75, 28, 50, 0.2);
+
+  color: #ffffff;
+}
+
+.fa-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: #f8eff3;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.fa-slide.is-side::after {
+  opacity: 0.5;
+}
+
+.fa-slide-content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 23px 28px 26px;
+  text-align: center;
+}
+
+.fa-slide-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  opacity: 0.74;
+}
+
+.fa-slide h3 {
+  margin: 3px 0 4px;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.fa-slide-content > p {
+  margin: 0;
+  font-size: 11px;
+  opacity: 0.79;
+}
+
+/* =========================================
+   WINNERS
+========================================= */
+
+.fa-podium {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 12px;
+  margin-top: 27px;
+}
+
+.fa-winner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.fa-winner-1 {
+  transform: translateY(-14px);
+}
+
+.fa-winner-title {
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.fa-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+  overflow: hidden;
+
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+
+  background: #f8eaf0;
+  color: #7e1f4e;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.fa-winner-1 .fa-avatar {
+  width: 76px;
+  height: 76px;
+  border-width: 3px;
+  font-size: 21px;
+}
+
+.fa-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fa-winner-name {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 10px;
+
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fa-winner-1 .fa-winner-name {
+  font-size: 14px;
+}
+
+.fa-winner-nim {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 3px;
+
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0.75;
+}
+
+.fa-winner-score {
+  margin-top: 11px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.fa-winner-1 .fa-winner-score {
+  font-size: 26px;
+}
+
+.fa-winner-score-label {
+  margin-top: 4px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.fa-side-click {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.fa-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 1px;
+}
+
+.fa-controls > button {
+  display: grid;
+  place-items: center;
+
+  width: 37px;
+  height: 37px;
+
+  border: 1px solid #dec8d3;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #7e1f4e;
+
+  cursor: pointer;
+}
+
+.fa-controls > button:hover {
+  background: #f8edf2;
+}
+
+.fa-year-tabs {
+  display: flex;
+  gap: 3px;
+  padding: 4px;
+  border-radius: 100px;
+  background: #f4edf1;
+}
+
+.fa-year-tabs button {
+  min-width: 61px;
+  padding: 8px 11px;
+
+  border: 0;
+  border-radius: 100px;
+
+  background: transparent;
+  color: #856d7a;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.fa-year-tabs button.is-active {
+  background: #7e1f4e;
+  color: #ffffff;
+}
+
+.fa-all-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.fa-all-action button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 17px;
+
+  border: 1px solid #d7bac8;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #7e1f4e;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.fa-all-action button:hover {
+  background: #fcf5f8;
+}
+
+/* =========================================
+   ALL RESULTS
+========================================= */
+
+.fa-results {
+  scroll-margin-top: 32px;
+  margin: 26px 0;
+  padding: 24px;
+
+  border: 1px solid #e8dde2;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.fa-results-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee5e9;
+}
+
+.fa-results-header h2 {
+  margin: 5px 0 4px;
+  font-size: 21px;
+}
+
+.fa-results-header p {
+  margin: 0;
+  color: #867d83;
+  font-size: 13px;
+}
+
+.fa-filters {
+  display: flex;
+  gap: 5px;
+  padding: 4px;
+
+  border: 1px solid #eadce3;
+  border-radius: 10px;
+
+  background: #faf6f8;
+}
+
+.fa-filters button {
+  padding: 9px 14px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #786a71;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.fa-filters button.is-active {
+  background: #7e1f4e;
+  color: #ffffff;
+}
+
+.fa-ranking-group {
+  margin-top: 23px;
+}
+
+.fa-ranking-group h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.fa-ranking-list {
+  overflow: hidden;
+  border: 1px solid #f0e6eb;
+  border-radius: 11px;
+}
+
+.fa-ranking-row {
+  display: grid;
+  grid-template-columns:
+    50px minmax(0, 1fr) auto 90px;
+
+  align-items: center;
+  gap: 12px;
+
+  min-height: 67px;
+  padding: 10px 16px;
+
+  border-bottom: 1px solid #f0e6eb;
+}
+
+.fa-ranking-row:last-child {
+  border-bottom: 0;
+}
+
+.fa-ranking-row.is-mine {
+  background: #fcf3f7;
+}
+
+.fa-ranking-place {
+  color: #7e1f4e;
+  font-weight: 700;
+}
+
+.fa-ranking-person {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 3px;
+}
+
+.fa-ranking-person strong {
+  overflow: hidden;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fa-ranking-person span {
+  color: #91858d;
+  font-size: 11px;
+}
+
+.fa-sample-tag {
+  color: #9a7387;
+  font-size: 10px;
+}
+
+.fa-ranking-score {
+  color: #7e1f4e;
+  font-size: 15px;
+  text-align: right;
+}
+
+.fa-demo-note {
+  margin: 17px 0 0;
+  color: #877a81;
+  font-size: 11px;
+}
+
+/* =========================================
+   PERSONAL RESULT STRIP
+========================================= */
+
+.fa-my-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  margin: 30px 0 22px;
+  padding: 21px 25px;
+
+  border: 1px solid #e8dde2;
+  border-radius: 14px;
+
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(65, 29, 46, 0.03);
+}
+
+.fa-my-result h2 {
+  margin: 7px 0 0;
+  color: #30272c;
+  font-size: 21px;
+}
+
+.fa-my-result h2 span {
+  color: #c9b4bf;
+}
+
+.fa-my-result button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+  min-height: 41px;
+  padding: 0 14px;
+
+  border: 1px solid #d9b8c8;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #7e1f4e;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.fa-my-result button:hover {
+  background: #fbf2f6;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .fa-slide {
+    width: min(515px, 78%);
+  }
+
+  .fa-coverflow {
+    height: 412px;
+  }
+}
+
+@media (max-width: 700px) {
+  .fa-heading h2 {
+    font-size: 21px;
+  }
+
+  .fa-coverflow {
+    height: 405px;
+    margin: 0 -14px;
+  }
+
+  .fa-slide {
+    width: calc(100% - 45px);
+    max-width: 425px;
+    height: 353px;
+    border-radius: 23px;
+  }
+
+  .fa-slide-content {
+    padding: 23px 14px;
+  }
+
+  .fa-podium {
+    gap: 6px;
+    margin-top: 29px;
+  }
+
+  .fa-winner-name {
+    font-size: 11px;
+  }
+
+  .fa-winner-1 .fa-winner-name {
+    font-size: 12px;
+  }
+
+  .fa-avatar {
+    width: 47px;
+    height: 47px;
+  }
+
+  .fa-winner-1 .fa-avatar {
+    width: 61px;
+    height: 61px;
+  }
+
+  .fa-slide h3 {
+    font-size: 27px;
+  }
+
+  .fa-winner-score {
+    font-size: 17px;
+  }
+
+  .fa-winner-1 .fa-winner-score {
+    font-size: 22px;
+  }
+
+  .fa-winner-nim {
+    font-size: 9px;
+  }
+
+  .fa-my-result {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 19px;
+    gap: 16px;
+  }
+
+  .fa-my-result h2 {
+    font-size: 19px;
+  }
+
+  .fa-my-result button {
+    width: 100%;
+  }
+
+  .fa-results {
+    padding: 17px;
+  }
+
+  .fa-ranking-row {
+    grid-template-columns:
+      36px minmax(0, 1fr) 65px;
+
+    gap: 8px;
+    padding: 11px;
+  }
+
+  .fa-sample-tag {
+    display: none;
+  }
+
+  .fa-filters {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .fa-filters button {
+    padding: 9px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-slide::after {
+    transition: none;
+  }
+}

@@ -1,0 +1,781 @@
+:root {
+  --burgundy: #6D1735;
+
+  --rose-soft: #F8EFF2;
+  --rose-header: #F8EDEF;
+
+  --border: #F2E9EC;
+
+  --text-primary: #1D1D1D;
+  --text-secondary: #6F6F6F;
+
+  --success-bg: #EAF8F2;
+  --success-text: #287A5A;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.admin-dashboard {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: var(--text-primary);
+
+  font-family: 'Titillium Web', sans-serif;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.admin-content {
+  width: 100%;
+
+  position: relative;
+  z-index: 3;
+
+  margin-top: -64px;
+
+  padding: 0 28px 58px;
+}
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.stats-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.stat-card {
+  min-height: 126px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px;
+
+  border: 1px solid #F0E7EA;
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 24px rgba(109, 23, 53, 0.05);
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-title {
+  margin-bottom: 7px;
+
+  color: #555055;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.stat-value {
+  color: #171717;
+
+  font-size: 32px;
+  line-height: 1;
+}
+
+.stat-note {
+  margin-top: 8px;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #F9EEF2;
+
+  color: #7A1739;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.dashboard-section {
+  width: 100%;
+
+  margin-top: 24px;
+
+  padding: 20px;
+
+  border: 0.5px solid var(--border);
+  border-radius: 11px;
+
+  background: #ffffff;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 0;
+
+  font-size: 16px;
+}
+
+.section-heading > span {
+  color: #5F575B;
+
+  font-size: 10px;
+}
+
+.heading-icon {
+  color: var(--burgundy);
+}
+
+
+/* =========================
+   STAGES
+========================= */
+
+.stage-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+.stage-card {
+  min-height: 84px;
+
+  padding: 14px;
+
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+
+  background: #ffffff;
+}
+
+.stage-card.stage-active {
+  border-color: #E1C8D0;
+
+  background: #F8EEF2;
+}
+
+.stage-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 8px;
+}
+
+.stage-top strong {
+  font-size: 11px;
+}
+
+.stage-card p {
+  margin: 12px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+}
+
+.stage-status {
+  flex-shrink: 0;
+
+  padding: 4px 7px;
+
+  border-radius: 999px;
+
+  background: #F1EDEE;
+
+  color: #645B5E;
+
+  font-size: 8px;
+}
+
+.stage-status.active {
+  background: var(--burgundy);
+
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   ACTION LIST
+========================= */
+
+.action-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.action-item {
+  min-height: 52px;
+
+  display: grid;
+
+  grid-template-columns:
+    34px 1fr auto;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 2px;
+
+  border-bottom:
+    0.5px solid #F3ECEF;
+}
+
+.action-item:last-child {
+  border-bottom: none;
+}
+
+.action-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: var(--rose-soft);
+
+  color: var(--burgundy);
+}
+
+.action-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.action-text strong {
+  font-size: 11px;
+}
+
+.action-text span {
+  color: var(--text-secondary);
+
+  font-size: 9px;
+}
+
+.action-button {
+  min-width: 96px;
+
+  padding: 7px 14px;
+
+  border: 0.5px solid var(--border);
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #383236;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.action-button.primary {
+  border-color: var(--burgundy);
+
+  background: var(--burgundy);
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   SUBMISSIONS
+========================= */
+
+.submissions-section {
+  padding: 0;
+
+  overflow: hidden;
+}
+
+.submission-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 22px;
+}
+
+.submission-header h2 {
+  margin: 0 0 4px;
+
+  font-size: 16px;
+}
+
+.submission-header p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+}
+
+.see-all-button {
+  border: none;
+
+  background: transparent;
+
+  color: var(--burgundy);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.submission-table {
+  width: 100%;
+
+  table-layout: fixed;
+
+  border-collapse: collapse;
+}
+
+.submission-table thead {
+  background: var(--rose-header);
+}
+
+.submission-table th {
+  height: 42px;
+
+  padding: 10px 12px;
+
+  color: #4C4346;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-align: center;
+  vertical-align: middle;
+}
+
+.submission-table td {
+  height: 48px;
+
+  padding: 10px 12px;
+
+  border-bottom:
+    0.5px solid #F3ECEF;
+
+  color: #5F5659;
+
+  font-size: 10px;
+
+  text-align: center;
+  vertical-align: middle;
+}
+
+.submission-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.student-name {
+  color: #242124 !important;
+
+  font-weight: 600;
+
+  text-align: center !important;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-pill {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 72px;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.status-pill.review {
+  background: #F8E6EB;
+
+  color: #872E4C;
+}
+
+.status-pill.approved {
+  background: var(--success-bg);
+
+  color: var(--success-text);
+}
+
+.status-pill.revision {
+  background: #F3ECEE;
+
+  color: #785966;
+}
+
+
+/* =========================
+   TABLE ACTION
+========================= */
+
+.table-action {
+  min-width: 92px;
+
+  padding: 7px 12px;
+
+  border: 0.5px solid var(--border);
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #3D3638;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+.table-action.primary {
+  border-color: var(--burgundy);
+
+  background: var(--burgundy);
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   LAST STUDENT UPLOAD
+   DITARUH SETELAH
+   PENGAJUAN TERBARU
+========================= */
+
+.last-upload-section {
+  width: 100%;
+
+  margin-top: 24px;
+}
+
+.last-upload-info {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  border: 1px solid #E2EFE9;
+  border-radius: 11px;
+
+  background: #F8FCFA;
+}
+
+.last-upload-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #EAF8F2;
+
+  color: #287A5A;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.last-upload-copy {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  gap: 3px;
+}
+
+.last-upload-copy strong {
+  color: #30292C;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.last-upload-copy span {
+  overflow: hidden;
+
+  color: #81777B;
+
+  font-size: 10px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.last-upload-result {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 3px;
+
+  flex-shrink: 0;
+}
+
+.last-upload-result span {
+  color: #287A5A;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.last-upload-result small {
+  color: #8A7F83;
+
+  font-size: 9px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.admin-footer {
+  padding: 22px 58px;
+
+  border-top:
+    0.5px solid #F3ECEF;
+
+  color: #8A8285;
+
+  font-size: 9px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .stats-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .stage-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 650px) {
+  .admin-hero {
+    padding: 24px 20px;
+  }
+
+  .admin-content {
+    padding: 18px 14px 40px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .action-item {
+    grid-template-columns:
+      32px 1fr;
+  }
+
+  .action-button {
+    grid-column: 2;
+
+    width: fit-content;
+  }
+
+  .last-upload-info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .last-upload-result {
+    align-items: flex-start;
+  }
+
+  .last-upload-copy span {
+    white-space: normal;
+  }
+}
+
+
+/* =========================
+   TYPOGRAPHY SCALE FIX
+========================= */
+
+.stat-title {
+  font-size: 13px;
+}
+
+.stat-value {
+  font-size: 34px;
+}
+
+.stat-note {
+  font-size: 12px;
+}
+
+.section-heading h2 {
+  font-size: 18px;
+}
+
+.section-heading > span {
+  font-size: 12px;
+}
+
+.stage-top strong {
+  font-size: 13px;
+}
+
+.stage-card p {
+  font-size: 11px;
+}
+
+.stage-status {
+  font-size: 9px;
+}
+
+.action-text strong {
+  font-size: 13px;
+}
+
+.action-text span {
+  font-size: 11px;
+}
+
+.action-button {
+  font-size: 11px;
+}
+
+.submission-header h2 {
+  font-size: 18px;
+}
+
+.submission-header p {
+  font-size: 12px;
+}
+
+.see-all-button {
+  font-size: 11px;
+}
+
+.submission-table th {
+  font-size: 11px;
+}
+
+.submission-table td {
+  font-size: 12px;
+}
+
+.status-pill {
+  font-size: 10px;
+}
+
+.table-action {
+  font-size: 11px;
+}
+
+.admin-footer {
+  font-size: 10px;
+}

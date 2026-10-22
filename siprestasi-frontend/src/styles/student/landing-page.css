@@ -1,0 +1,2197 @@
+/* =========================================================
+   ROOT
+========================================================= */
+
+.landing-page {
+  min-height: 100vh;
+
+  background: #faf9f8;
+
+  color: #231f20;
+
+  font-family:
+    'Titillium Web',
+    sans-serif;
+}
+
+.landing-container {
+  width:
+    min(
+      1320px,
+      calc(100% - 80px)
+    );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.landing-header {
+  width: 100%;
+
+  border-bottom:
+    1px solid #ebe5e7;
+
+  background: #faf9f8;
+}
+
+.landing-header-inner {
+  height: 78px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.landing-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #231f20;
+
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.landing-brand-logo {
+  height: 54px;
+  width: auto;
+  max-width: 220px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.landing-brand-divider {
+  width: 1px;
+  height: 25px;
+
+  background: #ddd4d8;
+}
+
+.landing-brand > span {
+  font-size: 17px;
+  font-weight: 700;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.landing-header-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.landing-login-button,
+.landing-register-button {
+  height: 42px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.landing-login-button {
+  padding:
+    0
+    17px;
+
+  color: #5e575b;
+
+  border: 0;
+
+  background: transparent;
+}
+
+.landing-login-button:hover {
+  color: #7e1f4e;
+
+  background: #f4edf0;
+}
+
+.landing-register-button {
+  gap: 10px;
+
+  padding:
+    0
+    17px;
+
+  color: #ffffff;
+
+  border: 0;
+
+  background: #7e1f4e;
+}
+
+.landing-register-button:hover {
+  background: #68153f;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.landing-hero {
+  min-height: 520px;
+
+  display: flex;
+
+  align-items: center;
+
+  border-bottom:
+    1px solid #eee7ea;
+
+  background:
+    linear-gradient(
+      90deg,
+      #faf9f8 0%,
+      #faf9f8 52%,
+      #f8f2f5 78%,
+      #f5ebf0 100%
+    );
+}
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.landing-hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    330px;
+
+  align-items: center;
+
+  gap: 120px;
+
+  padding:
+    86px
+    0;
+}
+
+
+/* =========================================================
+   HERO COPY
+========================================================= */
+
+.landing-hero-copy {
+  max-width: 800px;
+}
+
+.landing-eyebrow {
+  display: block;
+
+  margin-bottom: 24px;
+
+  color: #7e1f4e;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.landing-hero h1 {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #231f20;
+
+  font-size:
+    clamp(
+      52px,
+      5.2vw,
+      76px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.landing-hero h1 span {
+  display: block;
+
+  color: #7e1f4e;
+}
+
+.landing-hero-description {
+  max-width: 650px;
+
+  margin:
+    30px
+    0
+    0;
+
+  color: #70696d;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.landing-hero-description span {
+  display: block;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.landing-primary-button {
+  min-height: 49px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  margin-top: 34px;
+
+  padding:
+    0
+    20px;
+
+  border: 0;
+
+  border-radius: 8px;
+
+  background: #7e1f4e;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+.landing-primary-button:hover {
+  background: #68153f;
+}
+
+.landing-primary-button:active {
+  transform:
+    translateY(1px);
+}
+
+
+/* =========================================================
+   REGISTRATION INFO
+========================================================= */
+
+.landing-registration-info {
+  padding-left: 32px;
+
+  border-left:
+    1px solid #d8cdd2;
+}
+
+.landing-registration-year {
+  display: block;
+
+  color: #9a9297;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.landing-registration-line {
+  width: 52px;
+  height: 1px;
+
+  margin:
+    16px
+    0
+    25px;
+
+  background: #7e1f4e;
+}
+
+.landing-registration-label {
+  display: block;
+
+  max-width: 230px;
+
+  color: #857e82;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.landing-registration-info h2 {
+  margin:
+    13px
+    0
+    0;
+
+  color: #7e1f4e;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.025em;
+}
+
+.landing-registration-info > p {
+  max-width: 260px;
+
+  margin:
+    14px
+    0
+    0;
+
+  color: #756e72;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.landing-registration-note {
+  display: block;
+
+  margin-top: 19px;
+
+  color: #a19a9e;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.landing-section-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    410px;
+
+  align-items: end;
+
+  gap: 60px;
+
+  margin-bottom: 48px;
+}
+
+.landing-section-eyebrow {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #7e1f4e;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.landing-section-heading h2,
+.landing-about-title-row h2,
+.landing-selection-heading h2 {
+  margin: 0;
+
+  color: #231f20;
+
+  font-size: 40px;
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+}
+
+.landing-section-heading > p {
+  margin: 0;
+
+  color: #817a7e;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   WINNERS
+========================================================= */
+
+.landing-winners {
+  padding: 110px 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   WINNER TOOLBAR
+========================================================= */
+
+.landing-winner-toolbar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  margin-bottom: 24px;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #e2dadd;
+}
+
+
+/* =========================================================
+   COHORT TABS
+========================================================= */
+
+.landing-cohort-tabs {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.landing-cohort-tab {
+  min-height: 38px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 14px;
+
+  color: #7e767b;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.landing-cohort-tab:hover {
+  color: #7e1f4e;
+
+  background: #f8f0f4;
+}
+
+.landing-cohort-tab.is-active {
+  color: #ffffff;
+
+  background: #7e1f4e;
+}
+
+
+/* =========================================================
+   ALL RANKING TOGGLE
+========================================================= */
+
+.landing-ranking-toggle {
+  min-height: 38px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  padding: 0 4px;
+
+  color: #7e1f4e;
+
+  border: 0;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.landing-ranking-toggle svg {
+  transition: transform 0.2s ease;
+}
+
+.landing-ranking-toggle:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.landing-ranking-toggle.is-active svg {
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   TOP 3
+========================================================= */
+
+.landing-winners-stage {
+  min-height: 340px;
+}
+
+.landing-winners-layout {
+  display: grid;
+
+  align-items: stretch;
+
+  gap: 18px;
+
+  min-height: 300px;
+}
+
+
+/* JUARA 1 AKTIF */
+
+.landing-winners-layout.is-active-1 {
+  grid-template-columns:
+    1.35fr
+    1fr
+    1fr;
+}
+
+
+/* JUARA 2 AKTIF */
+
+.landing-winners-layout.is-active-2 {
+  grid-template-columns:
+    1fr
+    1.35fr
+    1fr;
+}
+
+
+/* JUARA 3 AKTIF */
+
+.landing-winners-layout.is-active-3 {
+  grid-template-columns:
+    1fr
+    1fr
+    1.35fr;
+}
+/* =========================================================
+   WINNER CARD
+========================================================= */
+
+.landing-winner {
+  min-width: 0;
+  height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 26px;
+
+  border-top:
+    1px solid #dcd4d7;
+
+  background: #faf9f8;
+
+  color: #231f20;
+
+  cursor: pointer;
+
+  transition:
+    background 0.32s ease,
+    color 0.32s ease,
+    border-color 0.32s ease,
+    box-shadow 0.32s ease;
+}
+
+/* HOVER JUARA 2 & 3 */
+
+/* NOMOR */
+
+.landing-winner:not(.landing-winner-featured):hover
+.landing-winner-number {
+  color: #ffffff;
+}
+
+
+/* ANGKATAN KANAN ATAS */
+
+.landing-winner:not(.landing-winner-featured):hover
+.landing-winner-cohort {
+  color:
+    rgba(255, 255, 255, 0.58);
+}
+
+
+/* LABEL JUARA */
+
+.landing-winner:not(.landing-winner-featured):hover
+.landing-winner-rank {
+  color:
+    #6f686c;
+}
+
+
+/* NAMA */
+
+.landing-winner:not(.landing-winner-featured):hover
+h3 {
+  color: #ffffff;
+}
+
+
+/* NIM + ANGKATAN */
+
+.landing-winner:not(.landing-winner-featured):hover
+p {
+  color:
+    rgba(255, 255, 255, 0.72);
+}
+
+.landing-winner-featured {
+  border-top-color: #7e1f4e;
+
+  background: #7e1f4e;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 16px 32px
+    rgba(86, 39, 61, 0.1);
+}
+
+.landing-winner-featured:hover {
+border-top-color: #7e1f4e;
+
+  background: #7e1f4e;
+
+  box-shadow:
+    0 18px 36px
+    rgba(86, 39, 61, 0.12);
+}
+
+
+/* =========================================================
+   WINNER TOP
+========================================================= */
+
+.landing-winner-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+.landing-winner-number {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.landing-winner:not(
+  .landing-winner-featured
+)
+h3 {
+  color: #231f20;
+
+  font-size: 24px;
+}
+.landing-winner:not(
+  .landing-winner-featured
+)
+p {
+  color: #837c80;
+}
+
+.landing-winner-number {
+  color: #7e1f4e;
+}
+
+.landing-winner-cohort {
+  color: #9b9398;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.landing-winner-featured
+.landing-winner-cohort {
+  color:
+    rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   WINNER COPY
+========================================================= */
+
+.landing-winner-rank {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  opacity: 0.7;
+}
+
+.landing-winner h3 {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.02em;
+}
+
+.landing-winner-featured h3 {
+    color: #ffffff;
+  font-size: 28px;
+}
+
+.landing-winner p {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 10px 0 0;
+
+  color: #837c80;
+
+  font-size: 12px;
+}
+
+.landing-winner-featured p {
+  color:
+     rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.landing-winner-note {
+  margin: 20px 0 0;
+
+  color: #9a9397;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   ALL RANKING PANEL
+========================================================= */
+
+.landing-ranking-panel {
+  overflow: hidden;
+
+  margin-top: 38px;
+
+  border-top: 1px solid #ddd4d8;
+  border-bottom: 1px solid #ddd4d8;
+}
+
+
+/* =========================================================
+   RANKING HEADER
+========================================================= */
+
+.landing-ranking-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 32px 0 24px;
+}
+
+.landing-ranking-eyebrow {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #7e1f4e;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.landing-ranking-header h3 {
+  margin: 0;
+
+  color: #231f20;
+
+  font-size: 26px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.landing-ranking-header p {
+  max-width: 470px;
+
+  margin: 6px 0 0;
+
+  color: #817a7e;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+.landing-ranking-result-count {
+  flex-shrink: 0;
+
+  padding-top: 8px;
+
+  color: #9a9297;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.landing-ranking-controls {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding-bottom: 18px;
+}
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+.landing-ranking-filters {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+.landing-ranking-filters button {
+  min-height: 34px;
+
+  padding: 0 12px;
+
+  color: #7b7378;
+
+  border: 1px solid transparent;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.landing-ranking-filters
+button:hover {
+  color: #7e1f4e;
+
+  background: #f8f1f4;
+}
+
+.landing-ranking-filters
+button.is-active {
+  color: #7e1f4e;
+
+  border-color: #d7bcc8;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.landing-ranking-search {
+  width: min(320px, 100%);
+
+  min-height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 13px;
+
+  border: 1px solid #ddd4d8;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #91898e;
+}
+
+.landing-ranking-search:focus-within {
+  border-color: #b98ca2;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(126, 31, 78, 0.06);
+}
+
+.landing-ranking-search input {
+  width: 100%;
+
+  padding: 0;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #332d30;
+
+  font-family: inherit;
+
+  font-size: 12px;
+}
+
+.landing-ranking-search
+input::placeholder {
+  color: #aaa2a7;
+}
+
+
+/* =========================================================
+   COLUMN HEAD
+========================================================= */
+
+.landing-ranking-column-head {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    220px;
+
+  gap: 30px;
+
+  padding: 10px 18px;
+
+  border-top: 1px solid #ebe4e7;
+  border-bottom: 1px solid #ebe4e7;
+
+  color: #9a9297;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.landing-ranking-column-head
+> div {
+  display: grid;
+
+  grid-template-columns:
+    90px
+    110px;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   RANKING LIST
+========================================================= */
+
+.landing-ranking-list {
+  display: grid;
+}
+
+
+/* =========================================================
+   RANKING ROW
+========================================================= */
+
+.landing-ranking-row {
+  position: relative;
+
+  width: 100%;
+  min-height: 88px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    220px;
+
+  align-items: center;
+
+  gap: 30px;
+
+  overflow: hidden;
+
+  padding: 15px 18px;
+
+  border: 0;
+  border-bottom: 1px solid #eee8ea;
+
+  background: #ffffff;
+
+  color: #302a2d;
+
+  font-family: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.landing-ranking-row:last-child {
+  border-bottom: 0;
+}
+
+.landing-ranking-row:hover:not(
+  .is-selected
+) {
+  background: #fcf7f9;
+}
+
+.landing-ranking-row:active {
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   SELECTED BACKGROUND
+========================================================= */
+
+.landing-ranking-selected-background {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  background: #7e1f4e;
+}
+
+
+/* =========================================================
+   CONTENT LAYER
+========================================================= */
+
+.landing-ranking-student,
+.landing-ranking-meta {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   STUDENT
+========================================================= */
+
+.landing-ranking-student {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.landing-ranking-avatar {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #dec9d3;
+
+  border-radius: 50%;
+
+  background: #faf1f5;
+
+  color: #7e1f4e;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.landing-ranking-student-copy {
+  min-width: 0;
+}
+
+.landing-ranking-student-copy strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #302a2d;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease;
+}
+
+.landing-ranking-student-copy p {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 4px 0 0;
+
+  color: #928a8f;
+
+  font-size: 11px;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.landing-ranking-meta {
+  display: grid;
+
+  grid-template-columns:
+    90px
+    110px;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.landing-ranking-rank,
+.landing-ranking-score {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.landing-ranking-rank span,
+.landing-ranking-score span {
+  display: none;
+}
+
+.landing-ranking-rank strong {
+  color: #7e1f4e;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  transition:
+    color 0.2s ease;
+}
+
+.landing-ranking-score strong {
+  color: #302a2d;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+/* =========================================================
+   SELECTED ROW
+========================================================= */
+
+.landing-ranking-row.is-selected {
+  border-bottom-color: #7e1f4e;
+}
+
+.landing-ranking-row.is-selected
+.landing-ranking-avatar {
+  color: #ffffff;
+
+  border-color:
+    rgba(255, 255, 255, 0.38);
+
+  background:
+    rgba(255, 255, 255, 0.12);
+}
+
+.landing-ranking-row.is-selected
+.landing-ranking-student-copy strong {
+  color: #ffffff;
+}
+
+.landing-ranking-row.is-selected
+.landing-ranking-student-copy p {
+  color:
+    rgba(255, 255, 255, 0.7);
+}
+
+.landing-ranking-row.is-selected
+.landing-ranking-rank strong,
+.landing-ranking-row.is-selected
+.landing-ranking-score strong {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.landing-ranking-empty {
+  padding: 44px 20px;
+
+  text-align: center;
+}
+
+.landing-ranking-empty strong {
+  display: block;
+
+  color: #40383d;
+
+  font-size: 14px;
+}
+
+.landing-ranking-empty p {
+  margin: 5px 0 0;
+
+  color: #91898e;
+
+  font-size: 12px;
+}
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.landing-about {
+  padding:
+    115px
+    0;
+
+  background: #faf9f8;
+}
+
+.landing-about-heading {
+  margin-bottom: 55px;
+}
+
+.landing-about-title-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    440px;
+
+  align-items: end;
+
+  gap: 70px;
+}
+
+.landing-about-title-row p {
+  margin: 0;
+
+  color: #817a7e;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   INDICATORS
+========================================================= */
+
+.landing-indicator-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  border-top:
+    1px solid #ded6d9;
+
+  border-left:
+    1px solid #ded6d9;
+}
+
+.landing-indicator {
+  min-height: 215px;
+
+  padding: 25px;
+
+  border-right:
+    1px solid #ded6d9;
+
+  border-bottom:
+    1px solid #ded6d9;
+
+  background: transparent;
+}
+
+.landing-indicator-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 46px;
+
+  color: #7e1f4e;
+}
+
+.landing-indicator-top > span {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.landing-indicator h3 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.landing-indicator > p {
+  max-width: 240px;
+
+  margin:
+    8px
+    0
+    0;
+
+  color: #817a7e;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+.landing-selection {
+  padding:
+    120px
+    0;
+
+  background: #ffffff;
+}
+
+.landing-selection-heading {
+  max-width: 600px;
+
+  margin-bottom: 65px;
+}
+
+.landing-selection-heading > p {
+  max-width: 420px;
+
+  margin:
+    14px
+    0
+    0;
+
+  color: #817a7e;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.landing-selection-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 0;
+}
+
+.landing-selection-step {
+  position: relative;
+
+  min-height: 200px;
+
+  padding-right: 40px;
+}
+
+.landing-selection-number {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 34px;
+
+  border:
+    1px solid #7e1f4e;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #7e1f4e;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.landing-selection-line {
+  position: absolute;
+
+  top: 18px;
+  left: 48px;
+  right: 12px;
+
+  height: 1px;
+
+  background: #ded6d9;
+}
+
+.landing-selection-step h3 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.landing-selection-step p {
+  max-width: 220px;
+
+  margin:
+    9px
+    0
+    0;
+
+  color: #817a7e;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.landing-footer {
+  padding:
+    48px
+    0;
+
+  border-top:
+    1px solid #ded6d9;
+
+  background: #231f20;
+
+  color: #ffffff;
+}
+
+.landing-footer-inner {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.landing-footer-brand > span {
+  display: block;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.landing-footer-brand p {
+  margin:
+    9px
+    0
+    0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.58
+    );
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.landing-footer-copy {
+  margin: 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .landing-container {
+    width:
+      calc(
+        100% - 48px
+      );
+  }
+
+
+  /* HERO */
+
+  .landing-hero-grid {
+    grid-template-columns:
+      minmax(
+        0,
+        1fr
+      )
+      270px;
+
+    gap: 55px;
+  }
+
+
+  /* SECTION */
+
+  .landing-section-heading,
+  .landing-about-title-row {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  /* WINNER TOOLBAR */
+
+  .landing-winner-toolbar {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+
+  /* WINNERS */
+
+  .landing-winners-layout {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+  .landing-winner-featured {
+    grid-column:
+      span 2;
+  }
+
+
+  /* RANKING */
+
+  .landing-ranking-controls {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .landing-ranking-search {
+    width: 100%;
+  }
+
+  .landing-ranking-column-head {
+    grid-template-columns:
+      minmax(
+        0,
+        1fr
+      )
+      280px;
+  }
+
+  .landing-ranking-column-head
+  > div {
+    grid-template-columns:
+      70px
+      90px
+      1fr;
+  }
+
+  .landing-ranking-row {
+    grid-template-columns:
+      minmax(
+        0,
+        1fr
+      )
+      280px;
+  }
+
+  .landing-ranking-meta {
+    grid-template-columns:
+      70px
+      90px
+      1fr;
+  }
+
+
+  /* INDICATORS */
+
+  .landing-indicator-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+
+  /* SELECTION */
+
+  .landing-selection-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+
+    gap:
+      50px
+      0;
+  }
+
+  .landing-selection-step:nth-child(2)
+  .landing-selection-line {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .landing-container {
+    width:
+      calc(
+        100% - 36px
+      );
+  }
+
+
+  /* HEADER */
+
+  .landing-header-inner {
+    height: 70px;
+  }
+
+  .landing-brand-logo {
+    width: 58px;
+  }
+
+  .landing-brand-divider {
+    display: none;
+  }
+
+  .landing-brand > span {
+    font-size: 14px;
+  }
+
+  .landing-login-button {
+    display: none;
+  }
+
+  .landing-register-button {
+    height: 39px;
+
+    padding:
+      0
+      13px;
+  }
+
+
+  /* HERO */
+
+  .landing-hero {
+    min-height: auto;
+
+    background:
+      linear-gradient(
+        180deg,
+        #faf9f8 0%,
+        #faf9f8 58%,
+        #f6edf1 100%
+      );
+  }
+
+  .landing-hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    padding:
+      72px
+      0
+      82px;
+  }
+
+  .landing-hero h1 {
+    font-size:
+      clamp(
+        42px,
+        13vw,
+        58px
+      );
+
+    line-height: 1;
+  }
+
+  .landing-hero-copy > p {
+    margin-top: 24px;
+
+    font-size: 14px;
+  }
+
+  .landing-primary-button {
+    width: 100%;
+
+    justify-content: space-between;
+
+    margin-top: 28px;
+  }
+
+
+  /* REGISTRATION INFO */
+
+  .landing-registration-info {
+    max-width: 310px;
+
+    padding-left: 20px;
+  }
+
+  .landing-registration-info h2 {
+    font-size: 21px;
+  }
+
+
+  /* SECTIONS */
+
+  .landing-winners,
+  .landing-about,
+  .landing-selection {
+    padding:
+      82px
+      0;
+  }
+
+  .landing-section-heading {
+    margin-bottom: 34px;
+  }
+
+  .landing-section-heading h2,
+  .landing-about-title-row h2,
+  .landing-selection-heading h2 {
+    font-size: 31px;
+  }
+
+
+  /* WINNER TOOLBAR */
+
+  .landing-cohort-tabs {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+  .landing-cohort-tab {
+    width: 100%;
+
+    padding:
+      0
+      8px;
+
+    font-size: 11px;
+  }
+
+  .landing-ranking-toggle {
+    padding-left: 0;
+  }
+
+
+  /* WINNERS */
+
+  .landing-winners-stage {
+    min-height: auto;
+  }
+
+  .landing-winners-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-winner-featured {
+    grid-column: auto;
+
+    min-height: 280px;
+  }
+
+  .landing-winner {
+    min-height: 210px;
+  }
+
+  .landing-winner-featured h3 {
+    font-size: 30px;
+  }
+
+
+  /* ALL RANKING */
+
+  .landing-ranking-panel {
+    margin-top: 30px;
+  }
+
+  .landing-ranking-header {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .landing-ranking-result-count {
+    padding-top: 0;
+  }
+
+  .landing-ranking-filters {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 3px;
+  }
+
+  .landing-ranking-filters button {
+    flex-shrink: 0;
+  }
+
+  .landing-ranking-column-head {
+    display: none;
+  }
+
+
+  /* RANKING ROW */
+
+  .landing-ranking-row {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    padding:
+      17px
+      4px;
+  }
+
+  .landing-ranking-meta {
+    grid-template-columns:
+      1fr
+      1fr
+      auto;
+
+    gap: 12px;
+
+    padding-left: 60px;
+  }
+
+  .landing-ranking-rank span,
+  .landing-ranking-score span {
+    display: block;
+
+    color: #9b9398;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+  }
+
+  .landing-ranking-detail {
+    align-self: end;
+  }
+
+
+  /* INDICATORS */
+
+  .landing-indicator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-indicator {
+    min-height: auto;
+
+    padding: 22px;
+  }
+
+  .landing-indicator-top {
+    margin-bottom: 32px;
+  }
+
+
+  /* SELECTION */
+
+  .landing-selection-grid {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .landing-selection-step {
+    min-height: auto;
+
+    padding:
+      0
+      0
+      42px
+      54px;
+  }
+
+  .landing-selection-number {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    margin: 0;
+  }
+
+  .landing-selection-line {
+    top: 43px;
+    bottom: 6px;
+    left: 17px;
+    right: auto;
+
+    width: 1px;
+    height: auto;
+  }
+
+  .landing-selection-step:last-child
+  .landing-selection-line {
+    display: none;
+  }
+
+
+  /* FOOTER */
+
+  .landing-footer-inner {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 30px;
+  }
+}

@@ -1,0 +1,902 @@
+:root {
+  --burgundy: #6D1735;
+
+  --border: #F1E8EB;
+
+  --rose-soft: #FBF4F6;
+  --rose-header: #F9EEF1;
+
+  --text: #272225;
+  --text-secondary: #776D71;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.mapres-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: var(--text);
+
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.mapres-content {
+  width: 100%;
+
+  position: relative;
+  z-index: 3;
+
+  margin-top: -64px;
+
+  padding: 0 28px 55px;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.mapres-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 26px;
+}
+
+.mapres-summary-card {
+  min-height: 126px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px;
+
+  border: 1px solid #F0E7EA;
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: inherit;
+  font-family: inherit;
+  text-align: left;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 24px rgba(109, 23, 53, 0.05);
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mapres-summary-card:hover {
+  border-color: #DFC5CE;
+
+  background: #FFFCFD;
+}
+
+.mapres-summary-card.active {
+  border-color: #A84F72;
+
+  background: #FBF1F4;
+
+  box-shadow:
+    0 8px 24px rgba(109, 23, 53, 0.08);
+}
+
+.mapres-summary-title {
+  margin-bottom: 7px;
+
+  color: #555055;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mapres-summary-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mapres-summary-copy strong {
+  color: #171717;
+
+  font-size: 34px;
+  line-height: 1;
+}
+
+.mapres-summary-copy p {
+  margin: 8px 0 0;
+
+  color: #817579;
+
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.mapres-summary-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #F9EEF2;
+  color: #7A1739;
+}
+
+.mapres-summary-card.active .mapres-summary-icon {
+  background: #F4DFE6;
+  color: #6D1735;
+}
+
+/* =========================
+   FILTER
+========================= */
+
+.filter-section {
+  width: 100%;
+
+  padding:
+    0
+    42px
+    13px;
+}
+
+.mapres-filter {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    250px
+    140px
+    140px
+    155px
+    auto
+    minmax(280px, 1fr);
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+/* SEARCH */
+
+.search-box {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 13px;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  border: 1px solid #eae3e6;
+  border-radius: 8px;
+
+  color: #2B2527;
+
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.search-box input {
+  width: 100%;
+
+  padding: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #383234;
+
+  font-family: inherit;
+
+  font-size: 12px;
+}
+
+.search-box input::placeholder {
+  color: #968B8F;
+}
+
+/* SELECT */
+
+.mapres-filter select {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 12px;
+
+  border: none;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  border: 1px solid #eae3e6;
+  border-radius: 8px;
+
+  color: #2B2527;
+
+  font-family: inherit;
+  font-weight: 400;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+/* RESET */
+
+.reset-filter {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #61595C;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.reset-filter:hover {
+  color: var(--burgundy);
+}
+
+/* SORT */
+
+.sort-button {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  justify-self: end;
+
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  border: 1px solid #F2E9EC;
+  border-radius: 8px;
+
+  color: #2B2527;
+
+  font-family: inherit;
+  font-weight: 400; 
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.sort-button strong {
+  color: #342E31;
+
+  font-weight: 600;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.mapres-table-card {
+  width: 100%;
+
+  margin-top: 8px;
+
+  overflow: hidden;
+
+  border:
+    0.5px solid var(--border);
+
+  border-radius: 11px;
+
+  background: #ffffff;
+}
+
+.mapres-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.mapres-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.mapres-table thead {
+  background: var(--rose-header);
+}
+
+.mapres-table th {
+  height: 40px;
+
+  padding: 10px 8px;
+
+  color: #645A5E;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-align: center;
+  vertical-align: middle;
+
+  background: #ffffff;
+
+  color: #6D1735;
+
+  font-weight: 600;
+
+  border-bottom: 1px solid #F2E9EC; 
+}
+
+.mapres-table td {
+  height: 58px;
+
+  padding: 8px 10px;
+
+   background: #ffffff;
+  border-bottom: 1px solid #F5F5F5;
+
+  color: #5E5659;
+
+  font-size: 11px;
+
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mapres-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.mapres-table tbody tr:hover {
+  background: #FFFCFD;
+}
+
+/* COLUMN WIDTH */
+
+.mapres-table th:nth-child(1) {
+  width: 24%;
+}
+
+.mapres-table th:nth-child(2) {
+  width: 9%;
+}
+
+.mapres-table th:nth-child(3) {
+  width: 8%;
+}
+
+.mapres-table th:nth-child(4) {
+  width: 12%;
+}
+
+.mapres-table th:nth-child(5) {
+  width: 16%;
+}
+
+.mapres-table th:nth-child(6) {
+  width: 16%;
+}
+
+.mapres-table th:nth-child(7) {
+  width: 15%;
+}
+
+/* =========================
+   STUDENT
+========================= */
+
+.mapres-student {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding-left: 76px;
+
+  text-align: left;
+}
+
+.student-avatar {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #F2E8EB;
+
+  color: var(--burgundy);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.student-info strong {
+  color: #2C2729;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.student-info span {
+  margin-top: 2px;
+
+  color: #867B7F;
+
+  font-size: 10px;
+}
+
+/* =========================
+   COMPLETENESS
+========================= */
+
+.completeness-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 75px;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.completeness-pill.complete {
+  background: #F4E8EC;
+
+  color: #71314A;
+}
+
+.completeness-pill.partial {
+  background: #FBE9ED;
+
+  color: #9B4560;
+}
+
+.completeness-pill.incomplete {
+  background: #FFE1DE;
+
+  color: #BF3D3D;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.mapres-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  min-width: 90px;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.mapres-status.review {
+  background: #F2E9EC;
+
+  color: #6D1735;
+}
+
+.mapres-status.approved {
+  background: #ECF8F2;
+
+  color: #28785A;
+}
+
+.mapres-status.revision {
+  background: #FBE4EA;
+
+  color: #A54964;
+}
+
+.mapres-status.waiting {
+  background: #F1EBED;
+
+  color: #655A5E;
+}
+
+.mapres-status.rejected {
+  background: #FFE0DD;
+
+  color: #C33D3D;
+}
+
+/* =========================
+   ACTION
+========================= */
+
+.mapres-action {
+  min-width: 90px;
+
+  padding: 7px 12px;
+
+  border: none;
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.mapres-action.primary {
+  background: var(--burgundy);
+
+  color: #ffffff;
+}
+
+.mapres-action.secondary {
+  background: #F5ECEF;
+
+  color: #3D3538;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty-mapres {
+  height: 125px !important;
+
+  color: #8C8286 !important;
+
+  text-align: center !important;
+}
+
+/* =========================
+   TABLE FOOTER
+========================= */
+
+.mapres-table-footer {
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 14px;
+
+  color: #6E6468;
+
+  font-size: 10px;
+}
+
+.mapres-table-footer p {
+  margin: 0;
+}
+
+.mapres-table-footer p span {
+  color: var(--burgundy);
+
+  font-weight: 600;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.pagination button {
+  min-width: 30px;
+  height: 30px;
+
+  padding: 0 10px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #FAF4F6;
+
+  color: #4D4548;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: var(--burgundy);
+
+  color: #ffffff;
+}
+
+.pagination button:disabled {
+  color: #BEB5B8;
+
+  cursor: not-allowed;
+}
+
+.pagination-dots {
+  padding: 0 3px;
+
+  color: #897E82;
+
+  font-size: 11px;
+}
+
+/* =========================
+   INFORMATION
+========================= */
+
+.mapres-information {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  /* sebelumnya terlalu jauh */
+  margin-top: 24px;
+
+  padding: 11px 14px;
+
+  border-radius: 8px;
+
+  background: #FBF0F3;
+}
+
+.information-icon {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+  border-radius: 50%;
+
+  background: var(--burgundy);
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.information-copy {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.mapres-information strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: var(--burgundy);
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.mapres-information p {
+  margin: 0;
+
+  color: #75696E;
+
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.mapres-footer {
+  margin-top: 10px;
+
+  padding: 28px 58px;
+
+  border-top:
+    0.5px solid #F2EAED;
+
+  color: #91878B;
+
+  font-size: 9px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1150px) {
+  .mapres-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 26px;
+  }
+
+  .mapres-filter {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .sort-button {
+    justify-self: stretch;
+  }
+
+  .mapres-student {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .mapres-hero {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 22px;
+
+    padding: 24px 20px;
+  }
+
+  .mapres-content {
+    padding: 20px 12px 40px;
+  }
+
+  .mapres-summary-grid {
+    grid-template-columns: 1fr;
+
+    padding: 0 0 22px;
+  }
+
+  .filter-section {
+    padding: 0 0 13px;
+  }
+
+  .mapres-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .ranking-button {
+    align-self: flex-start;
+  }
+
+  .mapres-table-footer {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+}
+/* =========================
+   FINAL TABLE SIZE FIX
+========================= */
+
+.mapres-table-card,
+.mapres-table-wrapper,
+.mapres-table,
+.mapres-table tbody {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.mapres-table td {
+  height: 52px;
+  min-height: 0;
+
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.mapres-table-footer {
+  min-height: 0;
+
+  padding: 10px 14px;
+}
+
+.mapres-information {
+  margin-top: 16px;
+
+  padding: 11px 14px;
+}

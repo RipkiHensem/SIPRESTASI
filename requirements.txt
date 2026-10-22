@@ -1,0 +1,2 @@
+# Dependensi Python untuk layanan AI saja.
+-r siprestasi-ai-main/requirements.txt
